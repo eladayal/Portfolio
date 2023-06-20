@@ -62,7 +62,6 @@
         </SplideSlide>
       </Splide>
     </template> -->
-
     <!-- Belive -->
     <section>
       <div class="container flex flex-col gap-5 md:gap-0 md:flex-row justify-between font-primary mb-24">
@@ -112,13 +111,13 @@ const howItWorks = [
     title: "Make the most of your existing recycling spot.",
     description:
       "Continue your usual recycling routine. Easily add your bins or local recycling facility if they're not listed on the map.",
-    image: "/images/how2.png",
+    image: "~/public/images/how2.png",
   },
   {
     title: "Turn recycling into rewards.",
     description:
       "Verify your location with the app and unlock a world of rewards. Earn points or cash to withdraw to your bank account, donate to charity, or enjoy discounts on future purchases.",
-    image: "/images/how3.png",
+    image: "/public/images/how3.png",
   },
 ];
 </script>
