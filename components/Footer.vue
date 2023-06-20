@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="w-full flex justify-between items-center container">
-      <div class="flex flex-col py-14">
+    <div class="container my-5 md:my-0 w-full flex flex-col md:flex-row gap-5 md:gap-5 justify-between items-center">
+      <div class="flex flex-col md:py-14 items-center">
         <nuxt-img class="" src="/images/cycledlogo.png" alt="image" width="200" height="auto" />
         <div class="my-5 text-2xl font-medium font-primary">
           Turn your <span class="emphasis font-semibold">trash</span>, into
@@ -10,10 +10,10 @@
       </div>
       <div class="text-center">
         <small class="font-semibold">Copyright © 2023 All rights reserved to Cycled</small>
-        <div class="flex gap-1">
+        <div class="flex flex-wrap gap-1">
           <div v-for="creator in creators" class="flex">
             <nuxt-link :to="creator.linkedin">
-              <small class="">{{ creator.name }} | </small>
+              <small>{{ creator.name }} | </small>
             </nuxt-link>
           </div>
         </div>
