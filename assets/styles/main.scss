@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "button.scss";
+
+@layer base {
+  @font-face {
+    font-family: "acorn";
+    src: url("/fonts/Acorn-Regular.otf") format("otf");
+    font-display: auto;
+    font-style: normal;
+  }
+}
+
+.emphasis {
+  @apply text-[#fcb01c] font-bold font-primary;
+}
