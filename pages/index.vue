@@ -82,7 +82,7 @@
     <!-- Join Us -->
     <section>
       <div class="flex flex-col gap-5 justify-center items-center bg-[#ffcc075e] px-6 py-24">
-        <h2 class="text-5xl font-bold font-primary">Join the initiative.</h2>
+        <h2 class="text-4xl sm:text-5xl font-bold font-primary">Join the initiative.</h2>
         <p class="text-lg">
           We have ambitious aspirations to transform the world. Get in touch to become a part of this expedition.
         </p>
