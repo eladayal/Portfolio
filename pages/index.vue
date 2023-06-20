@@ -41,7 +41,7 @@
             {{ idx + 1 }}
           </h2>
           <div class="flex flex-col sm:flex-row gap-12" :class="idx % 2 ? 'md:flex-row-reverse' : ''">
-            <nuxt-img class="w-48 h-48" :src="how.image" alt="image" width="300" height="auto" />
+            <NuxtImg class="w-48 h-48" :src="how.image" alt="image" width="300" height="auto" />
             <div class="flex flex-col gap-2 md:gap-5 w-full md:w-1/2">
               <h2 class="font-bold text-2xl font-primary">{{ how.title }}</h2>
               <p class="text-xl">{{ how.description }}</p>
@@ -111,13 +111,13 @@ const howItWorks = [
     title: "Make the most of your existing recycling spot.",
     description:
       "Continue your usual recycling routine. Easily add your bins or local recycling facility if they're not listed on the map.",
-    image: "~/public/images/how2.png",
+    image: "/images/how2.png",
   },
   {
     title: "Turn recycling into rewards.",
     description:
       "Verify your location with the app and unlock a world of rewards. Earn points or cash to withdraw to your bank account, donate to charity, or enjoy discounts on future purchases.",
-    image: "/public/images/how3.png",
+    image: "/images/how3.png",
   },
 ];
 </script>
