@@ -36,11 +36,11 @@
         >
           <h2
             class="font-bold text-5xl font-primary h-fit w-fit p-5 bg-[#b9db91] rounded-full"
-            :class="idx % 2 ? 'self-end sm:self-start' : ''"
+            :class="idx % 2 ? 'self-end md:self-start' : ''"
           >
             {{ idx + 1 }}
           </h2>
-          <div class="flex flex-col sm:flex-row gap-12" :class="idx % 2 ? 'md:flex-row-reverse' : ''">
+          <div class="flex flex-col sm:flex-row gap-12" :class="idx % 2 ? 'sm:flex-row-reverse' : ''">
             <NuxtImg class="w-48 h-48" :src="how.image" alt="image" width="300" height="auto" />
             <div class="flex flex-col gap-2 md:gap-5 w-full md:w-1/2">
               <h2 class="font-bold text-2xl font-primary">{{ how.title }}</h2>
@@ -105,7 +105,7 @@ const howItWorks = [
     title: "Effortlessly scan and organize packages from home",
     description:
       "Make recycling a breeze with Cycled: simply scan the barcode of plastic containers, milk cartons, metal cans, and more as you prepare for recycling",
-    image: "/images/how1.png",
+    image: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329347/Cycled/how1_jrwsnr.png",
   },
   {
     title: "Make the most of your existing recycling spot.",

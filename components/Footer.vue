@@ -10,7 +10,7 @@
       </div>
       <div class="text-center">
         <small class="font-semibold">Copyright © 2023 All rights reserved to Cycled</small>
-        <div class="flex flex-wrap gap-1">
+        <div class="flex flex-wrap justify-center gap-1">
           <div v-for="creator in creators" class="flex">
             <nuxt-link :to="creator.linkedin">
               <small>{{ creator.name }} | </small>
