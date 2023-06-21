@@ -74,19 +74,27 @@
             officiis? Quasi autem in odio ab eveniet reiciendis iure animi excepturi cumque! Velit?
           </p>
         </div>
-        <nuxt-img class="rounded-3xl object-contain" src="/images/win.jpg" alt="image" width="500" height="auto" />
+        <nuxt-img
+          class="rounded-3xl object-contain"
+          src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329349/Cycled/win_xndjdb.jpg"
+          alt="image"
+          width="500"
+          height="auto"
+        />
       </div>
     </section>
     <!-- Belive End -->
 
     <!-- Join Us -->
     <section>
-      <div class="flex flex-col gap-5 justify-center items-center bg-[#ffcc075e] px-6 py-24">
+      <div class="flex flex-col gap-5 justify-center items-center text-center bg-[#ffcc075e] px-6 py-24">
         <h2 class="text-5xl font-bold font-primary">Join the initiative.</h2>
         <p class="text-lg">
           We have ambitious aspirations to transform the world. Get in touch to become a part of this expedition.
         </p>
-        <button class="text-white bg-[#fcb01c] hover:bg-[#ffbb37] font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+        <button
+          class="text-white bg-[#fcb01c] hover:bg-[#ffbb37] font-medium rounded-lg text-sm md:text-base p-3 md:p-5 mr-2 mb-2"
+        >
           Join the Initiative
         </button>
       </div>

@@ -2,7 +2,13 @@
   <div>
     <div class="container my-5 md:my-0 w-full flex flex-col md:flex-row gap-5 md:gap-5 justify-between items-center">
       <div class="flex flex-col md:py-14 items-center">
-        <nuxt-img class="" src="/images/cycledlogo.png" alt="image" width="200" height="auto" />
+        <nuxt-img
+          class=""
+          src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329346/Cycled/cycledlogo_dlp1mh.png"
+          alt="image"
+          width="200"
+          height="auto"
+        />
         <div class="my-5 text-2xl font-medium font-primary">
           Turn your <span class="emphasis font-semibold">trash</span>, into
           <span class="emphasis font-semibold">Cash</span>
