@@ -23,7 +23,7 @@
           v-for="nav in socialNav"
           :key="nav.icon"
           class=""
-          :src="`/images/${nav.icon}.png`"
+          :src="nav.icon"
           alt="image"
           width="40"
           height="auto"
@@ -36,13 +36,13 @@
 <script setup lang="ts">
 const socialNav = [
   {
-    icon: "facebook",
+    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329347/Cycled/facebook_ots8uf.png",
   },
   {
-    icon: "insta",
+    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329348/Cycled/insta_yjkezr.png",
   },
   {
-    icon: "linkedin",
+    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329347/Cycled/linkedin_etr33h.png",
   },
 ];
 

@@ -111,13 +111,13 @@ const howItWorks = [
     title: "Make the most of your existing recycling spot.",
     description:
       "Continue your usual recycling routine. Easily add your bins or local recycling facility if they're not listed on the map.",
-    image: "/images/how2.png",
+    image: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329347/Cycled/how2_okva1w.png",
   },
   {
     title: "Turn recycling into rewards.",
     description:
       "Verify your location with the app and unlock a world of rewards. Earn points or cash to withdraw to your bank account, donate to charity, or enjoy discounts on future purchases.",
-    image: "/images/how3.png",
+    image: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329347/Cycled/how3_q6kkcv.png",
   },
 ];
 </script>
