@@ -1,8 +1,7 @@
 <template>
   <div>
     <div
-      class="relative z-0 h-[50vh] md:h-[70vh] bg-center bg-no-repeat bg-cover flex items-center justify-start"
-      style="background-image: url('/images/hero.jpg')"
+      class="relative z-0 h-[50vh] md:h-[70vh] bg-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/eladi/image/upload/v1687537540/recycling-concept-flat-lay-min_xs0jfh.jpg')] flex items-center justify-start"
     >
       <div
         class="z-0 opacity-50 absolute inset-0 h-full w-full bg-gradient-to-b from-transparent via-black/50 to-black"
@@ -26,6 +25,8 @@
       <!-- End -->
     </div>
     <!-- How it Works -->
+    <!-- style="background-image: url('/images/big-arrow.png')" -->
+    <!-- bg-center bg-no-repeat bg-[length:80%_30%] bg-fixed -->
     <section class="container mt-10 mb-24">
       <h2 class="font-bold mx-5 md:mx-0 text-[40px] md:text-[60px] mb-20 font-primary">How the App works</h2>
       <div class="flex flex-col gap-20 mx-20">
@@ -50,33 +51,21 @@
         </div>
       </div>
     </section>
-    <!-- How it Works  End-->
-    <!-- <div class="text-5xl">slider</div> -->
-    <!-- <template>
-      <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
-        <SplideSlide>
-          <img src="image1.jpg" alt="Sample 1" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="image2.jpg" alt="Sample 2" />
-        </SplideSlide>
-      </Splide>
-    </template> -->
+
     <!-- Belive -->
     <section>
-      <div class="container flex flex-col gap-5 md:gap-0 md:flex-row justify-between font-primary mb-24">
-        <div class="md:w-2/5">
-          <h2 class="font-bold text-4xl">Lorem ipsum dolor sit amet consectetur</h2>
+      <div class="container flex flex-col gap-5 md:gap-0 md:flex-row justify-evenly mb-24">
+        <div class="md:w-2/5 flex flex-col gap-5">
+          <h2 class="font-bold text-4xl font-primary">Our vision</h2>
           <p class="text-2xl">
-            adipisicing elit. Sunt cumque eligendi quae, doloremque tempora cum corrupti atque, minus amet ullam
-            similique perferendis provident quaerat fugit rerum velit hic nulla id. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Doloremque quasi deserunt laboriosam esse asperiores soluta id commodi
-            officiis? Quasi autem in odio ab eveniet reiciendis iure animi excepturi cumque! Velit?
+            We at <span class="font-bold">CYCLED</span> believe that it is possible to create change in any field and in
+            the fields of sustainability in particular through creating value for all participants in the recycling
+            operation and thus creating a real change in our environment and in our day to day lives.
           </p>
         </div>
         <nuxt-img
-          class="rounded-3xl object-contain"
-          src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329349/Cycled/win_xndjdb.jpg"
+          class="rounded-3xl object-contain w-full md:w-auto"
+          src="https://res.cloudinary.com/eladi/image/upload/v1687536559/trashmoney_j5g8cm.jpg"
           alt="image"
           width="500"
           height="auto"
@@ -87,16 +76,14 @@
 
     <!-- Join Us -->
     <section>
-      <div class="flex flex-col gap-5 justify-center items-center text-center bg-[#ffcc075e] px-6 py-24">
+      <div
+        class="flex flex-col gap-5 justify-center items-center text-center bg-gradient-to-r from-[#f58543] to-[#f8b01d] px-6 py-24"
+      >
         <h2 class="text-5xl font-bold font-primary">Join the initiative.</h2>
         <p class="text-lg">
           We have ambitious aspirations to transform the world. Get in touch to become a part of this expedition.
         </p>
-        <button
-          class="text-white bg-[#fcb01c] hover:bg-[#ffbb37] font-medium rounded-lg text-sm md:text-base p-3 md:p-5 mr-2 mb-2"
-        >
-          Join the Initiative
-        </button>
+        <button class="orange-btn">Join the Initiative</button>
       </div>
     </section>
     <!-- Join Us End -->
@@ -104,10 +91,6 @@
 </template>
 
 <script setup lang="ts">
-import { Splide, SplideSlide } from "@splidejs/vue-splide";
-
-import "@splidejs/vue-splide/css";
-
 const howItWorks = [
   {
     title: "Effortlessly scan and organize packages from home",

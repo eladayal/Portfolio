@@ -23,6 +23,13 @@
             </nuxt-link>
           </div>
         </div>
+        <lord-icon
+          src="https://cdn.lordicon.com/fsihxwoq.json"
+          trigger="hover"
+          colors="primary:#f58543,secondary:#121331"
+          style="width: 70px; height: 70px"
+        >
+        </lord-icon>
       </div>
       <nav class="social-nav flex gap-5">
         <nuxt-img
@@ -40,6 +47,14 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  script: [
+    {
+      src: "https://cdn.lordicon.com/bhenfmcm.js",
+    },
+  ],
+});
+
 const socialNav = [
   {
     icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329347/Cycled/facebook_ots8uf.png",
