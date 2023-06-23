@@ -70,7 +70,7 @@ const socialNav = [
 const creators = [
   { name: "Stav Schnarch", linkedin: "https://www.linkedin.com/in/stav-schnarch-13856a272" },
   { name: "Rom Elias" },
-  { name: "Yehonatan Sabag" },
+  { name: "Yehonatan Sabag", linkedin: "https://www.linkedin.com/in/yonatan-sabag-89a6411ba/" },
   { name: "Rotem Strauss" },
   { name: "Ilay Landes" },
 ];

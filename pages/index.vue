@@ -16,11 +16,13 @@
         <div class="my-5 md:my-10">
           Turn your <span class="emphasis font-primary">trash</span>, into <span class="emphasis">Cash</span>
         </div>
-        <button
-          class="text-white text-sm md:text-xl bg-[#fcb01c] hover:bg-[#ffbb37] font-medium rounded-lg px-5 py-2.5 mr-2 mb-2"
+        <a href="mailto: cycledil@gmail.com">
+          <button
+            class="text-white text-sm md:text-xl bg-[#fcb01c] hover:bg-[#ffbb37] font-medium rounded-lg px-5 py-2.5 mr-2 mb-2"
+          >
+            Get Cycled
+          </button></a
         >
-          Get Cycled
-        </button>
       </div>
       <!-- End -->
     </div>
@@ -83,7 +85,7 @@
         <p class="text-lg">
           We have ambitious aspirations to transform the world. Get in touch to become a part of this expedition.
         </p>
-        <button class="orange-btn">Join the Initiative</button>
+        <a href="mailto: cycledil@gmail.com"> <button class="orange-btn">Join the Initiative</button></a>
       </div>
     </section>
     <!-- Join Us End -->

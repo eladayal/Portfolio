@@ -1,7 +1,7 @@
 <template>
   <div
-    class="fixed w-full z-10 transition-all duration-300"
-    :class="scrollPosition > 0 ? 'bg-white drop-shadow-lg' : ''"
+    class="w-full z-10 transition-all duration-300"
+    :class="scrollPosition > 0 ? 'fixed bg-white drop-shadow-lg' : ''"
   >
     <div class="flex justify-between items-center py-5 mx-20 transition-all duration-300 transition-height">
       <nuxt-img
@@ -25,11 +25,6 @@ function updateScroll() {
 if (process.client) {
   window.addEventListener("scroll", updateScroll);
 }
-
-// function handleScroll() {
-//   if (process.client) {
-//   }
-// }
 </script>
 
 <style scoped>
