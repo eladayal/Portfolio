@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import "@splidejs/vue-splide/css";
+useHead({
+  title: "Cycled",
+});
 </script>
 
 <template>

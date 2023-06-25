@@ -38,14 +38,14 @@
           class="flex flex-col md:flex-row gap-10 md:even:flex-row-reverse"
         >
           <h2
-            class="font-bold text-5xl font-primary h-fit w-fit p-5 bg-[#b9db91] rounded-full"
+            class="text-white font-bold text-5xl font-primary h-fit w-fit p-5 bg-[#b9db91] rounded-full"
             :class="idx % 2 ? 'self-end md:self-start' : ''"
           >
             {{ idx + 1 }}
           </h2>
           <div class="flex flex-col sm:flex-row gap-12" :class="idx % 2 ? 'sm:flex-row-reverse' : ''">
             <NuxtImg class="w-48 h-48" :src="how.image" alt="image" width="300" height="auto" />
-            <div class="flex flex-col gap-2 md:gap-5 w-full md:w-1/2">
+            <div class="flex flex-col gap-2 w-full md:w-1/2">
               <h2 class="font-bold text-2xl font-primary">{{ how.title }}</h2>
               <p class="text-xl">{{ how.description }}</p>
             </div>
@@ -59,7 +59,7 @@
       <div class="container flex flex-col gap-5 md:gap-0 md:flex-row justify-evenly mb-24">
         <div class="md:w-2/5 flex flex-col gap-5">
           <h2 class="font-bold text-4xl font-primary">Our vision</h2>
-          <p class="text-2xl">
+          <p class="text-xl">
             We at <span class="font-bold">CYCLED</span> believe that it is possible to create change in any field and in
             the fields of sustainability in particular through creating value for all participants in the recycling
             operation and thus creating a real change in our environment and in our day to day lives.
@@ -85,7 +85,13 @@
         <p class="text-lg">
           We have ambitious aspirations to transform the world. Get in touch to become a part of this expedition.
         </p>
-        <a href="mailto: cycledil@gmail.com"> <button class="orange-btn">Join the Initiative</button></a>
+        <a href="mailto: cycledil@gmail.com">
+          <button
+            class="text-white text-sm md:text-xl bg-[#fcb01c] hover:bg-[#ffbb37] font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 shadow-lg"
+          >
+            Join the Initiative
+          </button></a
+        >
       </div>
     </section>
     <!-- Join Us End -->
