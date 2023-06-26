@@ -15,7 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        primary: ["acorn"],
+        primary: ["acorn", "sans-serif"],
       },
     },
   },
