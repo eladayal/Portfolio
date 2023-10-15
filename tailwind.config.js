@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         primary: ["acorn", "sans-serif"],
       },
+      colors: {
+        primary: "#5ebc67",
+      },
     },
   },
   plugins: [],
