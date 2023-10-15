@@ -6,26 +6,28 @@
         v-for="(project, idx) in projects"
         :key="idx"
       >
-        <div
-          class="flex items-center justify-center w-full h-40 p-4 bg-slate-200 transition-all duration-300 ease-in-out"
-        >
-          <nuxt-img
-            class="min-w-[150px] object-cover"
-            :src="project.image"
-            :alt="project.name"
-            width="150"
-            height="150"
-          />
-        </div>
-        <div class="px-6 py-4">
-          <p class="font-bold text-xl mb-2">{{ project.name }}</p>
-          <!-- <p
+        <a :href="project.url" class="!cursor-pointer" target="_blank">
+          <div
+            class="flex items-center justify-center w-full h-40 p-4 bg-slate-200 transition-all duration-300 ease-in-out"
+          >
+            <nuxt-img
+              class="min-w-[150px] object-cover"
+              :src="project.image"
+              :alt="project.name"
+              width="150"
+              height="150"
+            />
+          </div>
+          <div class="px-6 py-4">
+            <p class="font-bold text-xl mb-2">{{ project.name }}</p>
+            <!-- <p
           class="md:hidden group-hover:block md:invisible group-hover:visible text-gray-700 text-base transition-all duration-300 ease-in-out"
         >
           {{ project.description }}
         </p> -->
-          <a target="_blank" :href="project.url">{{ project.siteName }}</a>
-        </div>
+            <a target="_blank" :href="project.url">{{ project.siteName }}</a>
+          </div>
+        </a>
       </div>
     </div>
   </div>
