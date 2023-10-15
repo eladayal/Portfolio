@@ -7,9 +7,15 @@
         :key="idx"
       >
         <div
-          class="flex items-center justify-center w-full h-40 p-10 bg-slate-200 transition-all duration-300 ease-in-out"
+          class="flex items-center justify-center w-full h-40 p-4 bg-slate-200 transition-all duration-300 ease-in-out"
         >
-          <nuxt-img class="min-w-[150px] w-full h-auto object-cover" :src="project.image" :alt="project.name" />
+          <nuxt-img
+            class="min-w-[150px] object-cover"
+            :src="project.image"
+            :alt="project.name"
+            width="150"
+            height="150"
+          />
         </div>
         <div class="px-6 py-4">
           <p class="font-bold text-xl mb-2">{{ project.name }}</p>
@@ -57,7 +63,7 @@ const projects = [
     siteName: "place-il.org",
     description:
       "Enabling Israeli tech companies to effectively hire new talent from under-represented groups at scale with minimal risk.",
-    image: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697377932/Portfolio/logo-yangoAsset_1_vxxp9n.png",
+    image: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697379862/Portfolio/logo-yangoAsset_2_uydlux.svg",
     url: "https://place-il.org/join-us-lp/",
   },
   {
