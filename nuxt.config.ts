@@ -5,6 +5,6 @@ export default defineNuxtConfig({
     key: process.env.NUXT_APP_SUPABASE_KEY,
     redirect: false,
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts", "@nuxtjs/supabase"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts", "@nuxtjs/supabase", "nuxt-swiper"],
   css: ["/assets/styles/main.scss"],
 });

@@ -18,7 +18,7 @@ module.exports = {
         primary: ["acorn", "sans-serif"],
       },
       colors: {
-        primary: "#5ebc67",
+        primary: "#32aed1",
       },
     },
   },
