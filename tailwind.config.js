@@ -16,6 +16,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ["acorn", "sans-serif"],
+        inter: ["inter", "sans-serif"],
       },
       colors: {
         primary: "#32aed1",

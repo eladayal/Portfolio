@@ -11,6 +11,12 @@
     font-display: auto;
     font-style: normal;
   }
+  @font-face {
+    font-family: "inter";
+    src: url("/assets/fonts/Inter-Regular.ttf") format("ttf");
+    font-display: auto;
+    font-style: normal;
+  }
 }
 
 * {
@@ -19,6 +25,8 @@
 
 html {
   background-color: #fafafa;
+  // font-family: inter;
+  @apply font-inter;
 }
 
 h1,

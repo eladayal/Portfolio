@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
+
   supabase: {
     url: process.env.NUXT_APP_SUPABASE_URL,
     key: process.env.NUXT_APP_SUPABASE_KEY,

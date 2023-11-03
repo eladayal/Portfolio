@@ -3,7 +3,7 @@
     <div class="container my-5 md:my-0 w-full flex flex-col md:flex-row gap-5 md:gap-5 justify-between items-center">
       <div class="flex flex-col md:py-14 items-center">
         <nuxt-img
-          src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1697352414/Portfolio/elad-logo-color_ipgnph.png"
+          src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1698231194/Portfolio/logo-blue_vpgtzv.png"
           alt="image"
           width="200"
           height="auto"
@@ -18,15 +18,11 @@
         >
       </div>
       <nav class="social-nav flex gap-5">
-        <nuxt-img
-          v-for="nav in socialNav"
-          :key="nav.icon"
-          class=""
-          :src="nav.icon"
-          alt="image"
-          width="40"
-          height="auto"
-        />
+        <div v-for="nav in socialNav" :key="nav.icon">
+          <a :href="nav.url">
+            <nuxt-img class="w-7 h-7" :src="nav.icon" alt="image" width="40" height="40" />
+          </a>
+        </div>
       </nav>
     </div>
   </div>
@@ -35,13 +31,19 @@
 <script setup lang="ts">
 const socialNav = [
   {
-    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329347/Cycled/facebook_ots8uf.png",
+    name: "github",
+    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1698318279/Portfolio/github_qyyfhs.png",
+    url: "https://github.com/eladayal",
   },
   {
-    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329348/Cycled/insta_yjkezr.png",
+    name: "linkedin",
+    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1698318280/Portfolio/linkedin_m3re2v.png",
+    url: "https://www.linkedin.com/in/eladayal/",
   },
   {
-    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1687329347/Cycled/linkedin_etr33h.png",
+    name: "instagram",
+    icon: "https://res.cloudinary.com/dbt4olgrj/image/upload/v1698318279/Portfolio/instagram_awokxd.png",
+    url: "https://www.instagram.com/eladayal/",
   },
 ];
 </script>
