@@ -2,7 +2,7 @@
   <div>
     <div class="container my-5 md:my-0 w-full flex flex-col md:flex-row gap-5 md:gap-5 justify-between items-center">
       <div class="flex flex-col md:py-14 items-center">
-        <nuxt-img
+        <NuxtImg
           src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1698231194/Portfolio/logo-blue_vpgtzv.png"
           alt="image"
           width="200"
@@ -20,7 +20,7 @@
       <nav class="social-nav flex gap-5">
         <div v-for="nav in socialNav" :key="nav.icon">
           <a :href="nav.url">
-            <nuxt-img class="w-7 h-7" :src="nav.icon" alt="image" width="40" height="40" />
+            <NuxtImg class="w-7 h-7" :src="nav.icon" alt="image" width="40" height="40" />
           </a>
         </div>
       </nav>

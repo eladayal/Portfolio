@@ -13,7 +13,7 @@
             <div
               class="flex items-center justify-center w-full h-40 p-4 bg-slate-200 transition-all duration-300 ease-in-out"
             >
-              <nuxt-img
+              <NuxtImg
                 class="min-w-[150px] group-hover:!min-w-[160px] object-cover transition-all duration-300 ease-in-out"
                 :src="project.image"
                 :alt="project.name"

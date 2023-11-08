@@ -4,7 +4,7 @@
       <div class="container mx-auto px-10 md:px-20 flex flex-col md:flex-row justify-center items-center py-12">
         <!-- #1 -->
         <div class="flex justify-center items-center">
-          <nuxt-img
+          <NuxtImg
             class="w-1/2"
             src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1697532746/Portfolio/my-image_widuah.png"
             alt="my-image"

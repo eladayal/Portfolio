@@ -28,14 +28,14 @@
         </div>
         <!-- #2 -->
         <div class="relative flex justify-center items-center z-10">
-          <nuxt-img
+          <NuxtImg
             class="md:w-3/4 lg:w-1/2 z-10"
             src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1697532746/Portfolio/my-image_widuah.png"
             alt="my-image"
             width="400"
             height="400"
           />
-          <nuxt-img
+          <NuxtImg
             class="absolute w-36 md:w-56 lg:w-1/3 top-[20%] left-[80%] -translate-x-1/2 -translate-y-1/2 z-0"
             src="/images/svg/waves.svg"
             alt="waves-image"
@@ -43,7 +43,7 @@
             height="250"
           />
         </div>
-        <nuxt-img
+        <NuxtImg
           class="w-20 md:w-32 absolute bottom-1/2 md:bottom-[28%] lg:bottom-[10%] right-[10%] z-0"
           src="/images/svg/plus-color.svg"
           alt="waves-image"

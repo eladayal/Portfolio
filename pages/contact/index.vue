@@ -6,13 +6,13 @@
     </div>
     <div class="relative flex flex-col items-center max-md:py-10 md:pt-10 justify-center bg-primary">
       <!-- Mobile Shape -->
-      <nuxt-img
+      <NuxtImg
         class="shape md:hidden block absolute bottom-0 left-0 w-full h-full opacity-95 z-0 object-cover"
         src="/images/svg/mobileshape.png"
         alt="mobileshape"
       />
       <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32">
-        <nuxt-img
+        <NuxtImg
           class="shape hidden md:block absolute bottom-0 md:left-0 w-[85%] opacity-95 z-0"
           src="/images/svg/shape5.png"
           alt="shape"
@@ -21,9 +21,9 @@
         <div class="relative h-full max-md:py-12 container mx-auto flex gap-1 md:gap-10 justify-center items-center">
           <!-- <div class="container mx-auto flex gap-20 md:gap-5 justify-center items-center"> -->
           <div class="relative md:h-full flex-1 flex justify-center items-center">
-            <nuxt-img class="md:hidden absolute w-full z-10" src="/images/svg/photo-background.png" alt="waves-image" />
-            <nuxt-img
-              class="w-3/4 md:w-full max-md:rounded-b-[37%] md:self-end max-w-[25vw] z-20 grayscale"
+            <NuxtImg class="md:hidden absolute w-full z-10" src="/images/svg/photo-background.png" alt="waves-image" />
+            <NuxtImg
+              class="w-3/4 xl:w-3/4 md:w-full max-md:rounded-b-[37%] md:self-end max-w-[25vw] z-20 grayscale"
               src="/images/elad.png"
               alt="waves-image"
             />
@@ -32,10 +32,10 @@
           <div class="personal-info-container">
             <h3>{{ personalInfo.name }}</h3>
             <p>{{ personalInfo.position }}</p>
-            <span class="with-icon">
+            <a href="mailto:ayalelad@gmail.com" class="with-icon">
               <EnvelopeIcon class="h-5 w-5" />
               <p>{{ personalInfo.email }}</p>
-            </span>
+            </a>
             <a href="tel:+9720549250936" class="with-icon">
               <DevicePhoneMobileIcon class="h-5 w-5" />
               <p>{{ personalInfo.phone }}</p>

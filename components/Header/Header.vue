@@ -8,7 +8,7 @@
     >
       <!-- Site Logo -->
       <a href="/">
-        <nuxt-img
+        <NuxtImg
           class="w-40 md:w-56"
           :class="scrollPosition > 130 ? '' : ''"
           :src="

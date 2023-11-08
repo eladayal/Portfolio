@@ -5,9 +5,10 @@
         <div>
           <label for="name" class="contact-label">Name</label>
           <input
+            v-model="form.name"
             type="name"
             id="name"
-            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="John Doe"
             required
           />
@@ -15,9 +16,10 @@
         <div>
           <label for="email" class="contact-label">Email</label>
           <input
+            v-model="form.email"
             type="email"
             id="email"
-            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="name@company.com"
             required
           />
@@ -25,9 +27,10 @@
         <div>
           <label for="subject" class="contact-label">Subject</label>
           <input
+            v-model="form.subject"
             type="text"
             id="subject"
-            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
             placeholder="Let me know how i can help you"
             required
           />
@@ -35,15 +38,16 @@
         <div class="sm:col-span-2">
           <label for="message" class="contact-label">Your message</label>
           <textarea
+            v-model="form.message"
             id="message"
             rows="6"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
             placeholder="Leave a comment..."
           ></textarea>
         </div>
         <button
           type="submit"
-          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
         >
           Send message
         </button>
@@ -53,7 +57,11 @@
 </template>
 
 <script setup lang="ts">
+import nodemailer from "nodemailer";
 import { ContactForm } from "../types/index";
+
+const config = useRuntimeConfig();
+
 const form = ref<ContactForm>({
   name: "",
   subject: "",
@@ -61,8 +69,17 @@ const form = ref<ContactForm>({
   message: "",
 });
 
-const submitForm = () => {
-  console.log("submit");
+const submitForm = async () => {
+  console.log(form.value);
+};
+
+const clearForm = () => {
+  form.value = {
+    name: "",
+    subject: "",
+    email: "",
+    message: "",
+  };
 };
 </script>
 
@@ -74,14 +91,6 @@ const submitForm = () => {
 }
 .contact-label {
   @apply block text-lg mb-2 font-semibold leading-6 font-primary;
-  @apply text-gray-900 dark:text-gray-300;
+  @apply text-gray-900;
 }
 </style>
-<!-- <form class="container mx-auto">
-    <div>
-      <label for="email" class="block text-lg font-semibold leading-6 text-gray-900">Email</label>
-      <div class="mt-2">
-        <input type="email" name="email" id="email" class="ea-input" placeholder="you@example.com" />
-      </div>
-    </div>
-  </form> -->
