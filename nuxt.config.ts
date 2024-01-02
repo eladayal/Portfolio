@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   // srcDir: 'src',
   devtools: { enabled: true },
+  image: {
+    provider: "ipx",
+  },
   nitro: {
     preset: "netlify",
   },
