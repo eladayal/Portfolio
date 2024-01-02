@@ -19,9 +19,15 @@
       </div>
       <nav class="social-nav flex gap-5">
         <div v-for="nav in socialNav" :key="nav.icon">
-          <a :href="nav.url">
-            <NuxtImg class="w-7 h-7" :src="nav.icon" alt="image" width="40" height="40" />
-          </a>
+          <NuxtLink target="_blank" :href="nav.url" ta>
+            <NuxtImg
+              class="w-7 h-7 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
+              :src="nav.icon"
+              alt="image"
+              width="40"
+              height="40"
+            />
+          </NuxtLink>
         </div>
       </nav>
     </div>

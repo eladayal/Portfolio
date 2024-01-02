@@ -27,6 +27,7 @@
     "@splidejs/vue-splide": "^0.6.12",
     "@supabase/supabase-js": "^2.38.1",
     "nodemailer": "^6.9.7",
-    "nuxt-swiper": "^1.2.2"
+    "nuxt-swiper": "^1.2.2",
+    "zod": "^3.22.4"
   }
 }

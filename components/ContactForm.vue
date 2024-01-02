@@ -1,27 +1,35 @@
 <template>
   <div class="">
-    <div class="flex flex-col gap-16">
-      <form action="#" @submit.prevent="submitForm" class="space-y-8 max-md:container !px-5">
+    <div class="flex flex-col h-full">
+      <form
+        action="#"
+        @submit.prevent="submitForm"
+        class="h-full max-md:container !px-5 flex flex-col justify-evenly max-md:gap-5"
+      >
+        <!-- space-y-8  -->
         <div>
           <label for="name" class="contact-label">Name</label>
           <input
             v-model="form.name"
-            type="name"
+            type="text"
             id="name"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="John Doe"
-            required
           />
+          <!-- <Transition>
+            <span v-if="error" class="input-error">
+              {{ error.join(", ") }}
+            </span>
+          </Transition> -->
         </div>
         <div>
           <label for="email" class="contact-label">Email</label>
           <input
             v-model="form.email"
-            type="email"
+            type="text"
             id="email"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="name@company.com"
-            required
           />
         </div>
         <div>
@@ -32,7 +40,6 @@
             id="subject"
             class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
             placeholder="Let me know how i can help you"
-            required
           />
         </div>
         <div class="sm:col-span-2">
@@ -57,9 +64,11 @@
 </template>
 
 <script setup lang="ts">
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 import { ContactForm } from "../types/index";
+import { ContactZodSchema } from "~/zod/contact/contact.schema";
 
+const supabase = useSupabaseClient();
 const config = useRuntimeConfig();
 
 const form = ref<ContactForm>({
@@ -69,9 +78,7 @@ const form = ref<ContactForm>({
   message: "",
 });
 
-const submitForm = async () => {
-  console.log(form.value);
-};
+const errors = ref<any>({});
 
 const clearForm = () => {
   form.value = {
@@ -80,6 +87,36 @@ const clearForm = () => {
     email: "",
     message: "",
   };
+};
+const submitForm = async () => {
+  // const transporter = nodemailer.createTransport({
+  //   host: "smtp.gmail.com",
+  //   port: 465,
+  //   secure: true,
+  //   auth: config.smtp,
+  // });
+  const parsedForm = ContactZodSchema.safeParse(form.value);
+  if (!parsedForm.success) {
+    errors.value = parsedForm.error.formErrors?.fieldErrors;
+  } else {
+    errors.value = {};
+  }
+  // console.log("aweweqwe", parsedForm);
+  console.log(errors.value);
+  // const res = await $fetch("/api/contact", {
+  //   method: "POST",
+  //   body: parsedForm.data,
+  // });
+
+  // if (res) {
+  //   // swal.fire({
+  //   //   icon: 'success',
+  //   //   title: 'הטופס נשלח בהצלחה',
+  //   //   text: 'תודה, נדאג לחזור אליך בהקדם',
+  //   // });
+  // }
+
+  clearForm();
 };
 </script>
 

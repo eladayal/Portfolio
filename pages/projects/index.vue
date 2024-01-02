@@ -5,21 +5,31 @@
     <div v-else>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
         <div
-          class="group rounded max-h-fit overflow-hidden shadow-md flex flex-col hover:-translate-y-2 transition-all duration-300 ease-in-out"
+          class="rounded group max-h-fit overflow-hidden shadow-md flex flex-col hover:-translate-y-2 transition-all duration-300 ease-in-out"
           v-for="(project, idx) in projects"
           :key="idx"
+          @mouseover="setHover(idx, false)"
+          @mouseleave="setHover(idx, true)"
         >
           <a :href="project.url" class="!cursor-pointer" target="_blank">
             <div
-              class="flex items-center justify-center w-full h-40 p-4 bg-slate-200 transition-all duration-300 ease-in-out"
+              class="flex items-center justify-center w-full h-40 bg-slate-200 transition-all duration-300 ease-in-out"
             >
               <NuxtImg
-                class="min-w-[150px] group-hover:!min-w-[160px] object-cover transition-all duration-300 ease-in-out"
-                :src="project.image"
+                :class="
+                  project.hover
+                    ? 'min-w-[150px] w-16 transition-opacity duration-300 ease-in-out opacity-100 '
+                    : 'w-full h-full object-cover'
+                "
+                :src="project.hover ? project.image : project.site_image"
                 :alt="project.name"
-                width="150"
-                height="150"
               />
+              <!-- <NuxtImg
+                v-if="!hover"
+                class="opacity-0 hidden group-hover:block group-hover:opacity-100 w-full transition-all duration-300 ease-in-out"
+                :src="project.site_image"
+                :alt="project.name"
+              /> -->
             </div>
 
             <div class="px-6 py-4">
@@ -27,7 +37,7 @@
               <p class="text-gray-700 text-base h-24 overflow-y-scroll">
                 {{ project.description }}
               </p>
-              <!-- <p class="text-lg font-bold text-sky-700">{{ project.site_name }}</p> -->
+              <p class="text-lg font-bold text-sky-700">{{ project.site_name }}</p>
             </div>
             <div
               class="text-left space-y-2 opacity-0 translate-y-full transition-all duration-300 h-0 group-hover:h-auto group-hover:translate-y-0 group-hover:opacity-100"
@@ -59,6 +69,11 @@ const supabase = useSupabaseClient();
 const icons = ref<any>([]);
 const projects = ref<any>([]);
 const loading = ref<boolean>(false);
+const hover = ref<boolean>(true);
+
+const setHover = (index: number, value: boolean) => {
+  projects.value[index].hover = value;
+};
 
 onMounted(async () => {
   try {
@@ -70,6 +85,12 @@ onMounted(async () => {
       icons.value = technologies;
       projects.value = sites;
       loading.value = false;
+
+      // Initialize the 'hover' property for each project
+      projects.value = sites?.map((project: any) => ({
+        ...project,
+        hover: true,
+      }));
     }
   } catch (error) {
     console.log(error);

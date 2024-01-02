@@ -1,7 +1,9 @@
 <template>
   <NuxtLayout name="404">
-    <section class="min-h-screen bg-primary flex justify-center items-center">
-      <div class="container mx-auto px-10 md:px-20 flex flex-col md:flex-row justify-center items-center py-12">
+    <section class="min-h-screen bg-primary flex">
+      <div
+        class="container mx-auto px-10 md:px-20 flex flex-col md:flex-row justify-center md:items-center py-12 max-md:gap-10"
+      >
         <!-- #1 -->
         <div class="flex justify-center items-center">
           <NuxtImg
@@ -13,12 +15,20 @@
           />
         </div>
         <!-- #2 -->
-        <div class="flex flex-col justify-center items-end w-1/2 gap-20 text-center">
+        <div class="flex flex-col justify-center items-center gap-10 text-center">
           <div>
-            <h1 class="emphasis !text-white">The page you are looking for, does not exist</h1>
+            <h1 class="emphasis !text-white">There seems to be an error</h1>
             <h3 class="text-7xl emphasis !text-white">404</h3>
             <p class="text-white text-xl">not found</p>
           </div>
+          <button>
+            <NuxtLink
+              to="/"
+              class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+            >
+              Back to safety
+            </NuxtLink>
+          </button>
         </div>
       </div>
     </section>

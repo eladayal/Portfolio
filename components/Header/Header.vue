@@ -49,8 +49,38 @@
         >
           <div
             v-show="isMenuOpen"
-            class="py-20 flex lg:hidden flex-col gap-7 items-center fixed right-0 z-20 top-0 h-screen w-60 bg-[#fafafa]"
+            class="py-10 flex lg:hidden flex-col gap-7 items-center fixed right-0 z-20 top-0 h-screen w-60 bg-[#fafafa]"
           >
+            <button
+              class="absolute left-0 top-0 text-white -translate-x-1/2 translate-y-5 p-2.5 bg-cv-primary"
+              @click="isMenuOpen = false"
+              @keypress="isMenuOpen = false"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4" viewBox="0 0 20.744 20.744">
+                <g id="Group_52" data-name="Group 52" transform="translate(-5614.304 -1030.01)">
+                  <line
+                    id="Line_5"
+                    data-name="Line 5"
+                    x2="18.622"
+                    y2="18.622"
+                    transform="translate(5615.364 1031.07)"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                    stroke-width="3"
+                  />
+                  <line
+                    id="Line_6"
+                    data-name="Line 6"
+                    y1="18.622"
+                    x2="18.622"
+                    transform="translate(5615.364 1031.07)"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                    stroke-width="3"
+                  />
+                </g>
+              </svg>
+            </button>
             <nav class="flex flex-col justify-center items-center gap-5">
               <a
                 v-for="item in menu"
@@ -94,10 +124,7 @@ const menu = [
     name: "Projects",
     link: "/projects",
   },
-  {
-    name: "About",
-    link: "/about",
-  },
+
   {
     name: "Resume",
     link: "/resume",

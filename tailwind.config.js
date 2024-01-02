@@ -20,6 +20,8 @@ module.exports = {
       },
       colors: {
         primary: "#32aed1",
+        "cv-primary": "#002b7f",
+        "cv-secondary": "#f96b07",
       },
     },
   },

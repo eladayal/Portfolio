@@ -3,7 +3,8 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <Header />
-    <main class="flex-1 h-full max-lg:mt-28">
+    <!-- max-lg:mt-28 -->
+    <main class="flex-1 h-full">
       <slot />
     </main>
     <Footer />

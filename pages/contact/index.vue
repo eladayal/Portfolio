@@ -4,17 +4,17 @@
       <h1 class="text-center mb-5">/Contact me.</h1>
       <p class="text-2xl text-center font-medium">Feel free to contact me for inquires or questions</p>
     </div>
-    <div class="relative flex flex-col items-center max-md:py-10 md:pt-10 justify-center bg-primary">
+    <div class="relative flex flex-col justify-center items-center max-md:py-10 md:pt-10 bg-primary">
       <!-- Mobile Shape -->
       <NuxtImg
         class="shape md:hidden block absolute bottom-0 left-0 w-full h-full opacity-95 z-0 object-cover"
-        src="/images/svg/mobileshape.png"
+        src="images/svg/mobileshape.png"
         alt="mobileshape"
       />
       <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32">
         <NuxtImg
           class="shape hidden md:block absolute bottom-0 md:left-0 w-[85%] opacity-95 z-0"
-          src="/images/svg/shape5.png"
+          src="images/svg/shape5.png"
           alt="shape"
         />
 
@@ -24,7 +24,7 @@
             <NuxtImg class="md:hidden absolute w-full z-10" src="/images/svg/photo-background.png" alt="waves-image" />
             <NuxtImg
               class="w-3/4 xl:w-3/4 md:w-full max-md:rounded-b-[37%] md:self-end max-w-[25vw] z-20 grayscale"
-              src="/images/elad.png"
+              src="images/elad.png"
               alt="waves-image"
             />
           </div>
@@ -67,7 +67,7 @@ const personalInfo = {
 .personal-info-container {
   @apply z-10 flex flex-col gap-3 items-start justify-center;
   p {
-    @apply md:text-lg font-primary font-semibold;
+    @apply md:text-xl font-primary font-semibold;
   }
 }
 
