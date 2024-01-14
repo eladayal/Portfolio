@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col gap-8 py-40 !font-inter !text-cv-primary">
+  <div class="container flex flex-col gap-8 px-10 py-40 !font-inter !text-cv-primary">
     <!-- Header -->
 
     <div class="flex justify-between items-center gap-4">

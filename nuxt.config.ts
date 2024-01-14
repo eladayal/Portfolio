@@ -1,9 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // srcDir: 'src',
+  routeRules: {
+    "/": { prerender: true },
+  },
   devtools: { enabled: true },
   image: {
-    provider: "ipx",
+    provider: "static",
   },
   nitro: {
     preset: "netlify",
