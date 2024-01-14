@@ -5,7 +5,7 @@
     <div v-else>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
         <div
-          class="rounded group max-h-fit overflow-hidden shadow-md flex flex-col hover:shadow-lg hover:-translate-y-2 transition-all duration-300 ease-in-out"
+          class="rounded group max-h-fit overflow-hidden shadow-md flex flex-col hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 ease-in-out"
           v-for="(project, idx) in projects"
           :key="idx"
           @mouseover="setHover(idx, false)"
@@ -16,10 +16,11 @@
               class="flex items-center justify-center w-full h-40 bg-slate-200 transition-all duration-300 ease-in-out"
             >
               <NuxtImg
+                class="transition-opacity duration-300 ease-in-out"
                 :class="
                   project.hover
-                    ? 'min-w-[150px] w-16 transition-opacity duration-300 ease-in-out opacity-100 '
-                    : 'w-full h-full object-cover'
+                    ? 'min-w-[150px] w-16 opacity-100 group-hover:opacity-0'
+                    : 'opacity-0 w-full h-full object-cover  group-hover:opacity-100'
                 "
                 :src="project.hover ? project.image : project.site_image"
                 :alt="project.name"
@@ -44,12 +45,13 @@
             >
               <div class="flex gap-2 px-2 py-2">
                 <div class="w-5 h-auto flex justify-center items-center" v-for="(tag, idx) in project.tags" :key="idx">
-                  <img
+                  <NuxtImg
                     v-if="icons.find((icon:any) => icon.name === tag)"
                     class="object-contain"
                     :src="icons.find((icon:any) => icon.name === tag)?.image"
                     width="50"
                     height="50"
+                    preload
                   />
                 </div>
               </div>
