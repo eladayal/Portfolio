@@ -6,24 +6,23 @@
     </div>
     <div class="relative flex flex-col justify-center items-center max-md:py-10 md:pt-10 bg-primary">
       <!-- Mobile Shape -->
-      <NuxtImg
+      <img
         class="shape md:hidden block absolute bottom-0 left-0 w-full h-full opacity-95 z-0 object-cover"
         src="images/svg/mobileshape.png"
         alt="mobileshape"
       />
       <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32">
-        <NuxtImg
-          class="shape hidden md:block absolute bottom-0 md:left-0 w-[85%] opacity-95 z-0"
+        <img
+          class="shape hidden md:block absolute bottom-0 md:left-0 w-3/4 opacity-95 z-0"
           src="images/svg/shape5.png"
-          alt="shape"
         />
 
         <div class="relative h-full max-md:py-12 container mx-auto flex gap-1 md:gap-10 justify-center items-center">
           <!-- <div class="container mx-auto flex gap-20 md:gap-5 justify-center items-center"> -->
           <div class="relative md:h-full flex-1 flex justify-center items-center">
-            <NuxtImg class="md:hidden absolute w-full z-10" src="/images/svg/photo-background.png" alt="waves-image" />
-            <NuxtImg
-              class="w-3/4 xl:w-3/4 md:w-full max-md:rounded-b-[37%] md:self-end max-w-[25vw] z-20 grayscale"
+            <img class="md:hidden absolute w-full z-10" src="/images/svg/photo-background.png" alt="waves-image" />
+            <img
+              class="w-3/4 xl:w-[60%] md:w-full max-md:rounded-b-[37%] md:self-end max-w-[25vw] z-20 grayscale"
               src="images/elad.png"
               alt="waves-image"
             />

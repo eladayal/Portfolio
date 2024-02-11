@@ -8,7 +8,7 @@
         <h3 class="text-cv-secondary font-medium">Full Stack Developer</h3>
       </div>
       <div class="">
-        <NuxtImg
+        <img
           class="rounded-xl w-40"
           src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1702846987/Portfolio/IMG_8425_m8ecnh.jpg"
           alt="Cv image"

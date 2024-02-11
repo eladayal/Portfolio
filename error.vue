@@ -6,7 +6,7 @@
       >
         <!-- #1 -->
         <div class="flex justify-center items-center">
-          <NuxtImg
+          <img
             class="w-1/2"
             src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1697532746/Portfolio/my-image_widuah.png"
             alt="my-image"

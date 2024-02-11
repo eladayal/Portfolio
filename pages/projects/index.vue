@@ -20,10 +20,11 @@
                 :class="
                   project.hover
                     ? 'min-w-[150px] w-16 opacity-100 group-hover:opacity-0'
-                    : 'opacity-0 w-full h-full object-cover  group-hover:opacity-100'
+                    : 'opacity-0 w-full h-full object-cover group-hover:opacity-100'
                 "
                 :src="project.hover ? project.image : project.site_image"
                 :alt="project.name"
+                preload
               />
               <!-- <NuxtImg
                 v-if="!hover"
@@ -35,10 +36,10 @@
 
             <div class="px-6 py-4">
               <p class="font-bold text-xl mb-1">{{ project.name }}</p>
-              <p class="text-gray-700 text-base h-24 overflow-y-scroll">
+              <p class="text-gray-700 text-base h-24 overflow-y-auto">
                 {{ project.description }}
               </p>
-              <p class="text-lg font-bold text-sky-700">{{ project.site_name }}</p>
+              <p class="text-lg font-bold text-sky-700 hover:underline">{{ project.site_name }}</p>
             </div>
             <div
               class="text-left space-y-2 md:opacity-0 md:translate-y-full transition-all duration-300 md:group-hover:translate-y-0 md:group-hover:opacity-100"

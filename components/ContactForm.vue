@@ -4,7 +4,7 @@
       <form
         action="#"
         @submit.prevent="submitForm"
-        class="h-full max-md:container !px-5 flex flex-col justify-evenly gap-5"
+        class="h-full max-md:container !px-5 flex flex-col justify-center gap-5 md:gap-10"
       >
         <!-- space-y-8  -->
         <div>
