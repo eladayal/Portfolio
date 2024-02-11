@@ -8,12 +8,12 @@
       <!-- Mobile Shape -->
       <img
         class="shape md:hidden block absolute bottom-0 left-0 w-full h-full opacity-95 z-0 object-cover"
-        src="/images/svg/mobileshape.png"
+        src="../../public/images/svg/mobileshape.png"
       />
       <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32">
         <img
           class="shape hidden md:block absolute bottom-0 md:left-0 w-3/4 opacity-95 z-0"
-          src="/images/svg/shape5.png"
+          src="../../public/images/svg/Shape5.png"
         />
 
         <div class="relative h-full max-md:py-12 container mx-auto flex gap-1 md:gap-10 justify-center items-center">
