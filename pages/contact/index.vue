@@ -15,6 +15,7 @@
         <img
           class="shape hidden md:block absolute bottom-0 md:left-0 w-3/4 opacity-95 z-0"
           src="images/svg/shape5.png"
+          alt="mobileshape"
         />
 
         <div class="relative h-full max-md:py-12 container mx-auto flex gap-1 md:gap-10 justify-center items-center">
