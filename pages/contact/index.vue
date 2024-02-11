@@ -22,7 +22,7 @@
             <img class="md:hidden absolute w-full z-10" src="/images/svg/photo-background.png" alt="waves-image" />
             <img
               class="w-3/4 xl:w-[60%] md:w-full max-md:rounded-b-[37%] md:self-end max-w-[25vw] z-20 grayscale"
-              src="/images/elad.png"
+              src="/images/elad.webp"
               alt="waves-image"
             />
           </div>
