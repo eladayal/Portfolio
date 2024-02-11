@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   // srcDir: 'src',
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts", "@nuxtjs/supabase", "nuxt-swiper"],
   devtools: { enabled: true },
+  routeRules: {
+    "/": { prerender: true },
+  },
+  image: { domains: ["http://localhost:3000/", "https://eladayal.netlify.app/"] },
 
   nitro: {
     preset: "netlify",
