@@ -35,7 +35,7 @@
         />
         <img
           class="absolute w-36 md:w-56 lg:w-1/3 top-[20%] left-[80%] -translate-x-1/2 -translate-y-1/2 z-0"
-          src="images/svg/waves.svg"
+          src="/images/svg/waves.svg"
           alt="waves-image"
           width="250"
           height="250"
@@ -43,7 +43,7 @@
       </div>
       <img
         class="w-20 md:w-32 absolute bottom-1/2 md:bottom-[28%] lg:bottom-[10%] right-[10%] z-0"
-        src="images/svg/plus-color.svg"
+        src="/images/svg/plus-color.svg"
         alt="waves-image"
         width="150"
         height="100"
