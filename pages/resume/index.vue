@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col gap-8 px-10 py-40 !font-inter !text-cv-primary">
+  <div class="container flex flex-col gap-8 px-20 py-40 !font-inter !text-cv-primary">
     <!-- Header -->
 
     <div class="flex justify-between items-center gap-4">
@@ -136,6 +136,8 @@
 </template>
 
 <script setup lang="ts">
+import { ContactForm } from "../../types/index";
+import { ContactZodSchema } from "~/zod/contact/contact.schema";
 const supabase = useSupabaseClient();
 const skills = ref<any>([]);
 const loading = ref<boolean>(false);
@@ -244,10 +246,72 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+// import nodemailer from "nodemailer";
+
+// const supabase = useSupabaseClient();
+const config = useRuntimeConfig();
+
+const form = ref<ContactForm>({
+  name: "",
+  subject: "",
+  email: "",
+  message: "",
+});
+
+const errors = ref<any>({});
+
+const clearForm = () => {
+  form.value = {
+    name: "",
+    subject: "",
+    email: "",
+    message: "",
+  };
+};
+const submitForm = async () => {
+  // const transporter = nodemailer.createTransport({
+  //   host: "smtp.gmail.com",
+  //   port: 465,
+  //   secure: true,
+  //   auth: config.smtp,
+  // });
+  const parsedForm = ContactZodSchema.safeParse(form.value);
+  if (!parsedForm.success) {
+    errors.value = parsedForm.error.formErrors?.fieldErrors;
+  } else {
+    errors.value = {};
+  }
+  // console.log("aweweqwe", parsedForm);
+  console.log(errors.value);
+  // const res = await $fetch("/api/contact", {
+  //   method: "POST",
+  //   body: parsedForm.data,
+  // });
+
+  // if (res) {
+  //   // swal.fire({
+  //   //   icon: 'success',
+  //   //   title: 'הטופס נשלח בהצלחה',
+  //   //   text: 'תודה, נדאג לחזור אליך בהקדם',
+  //   // });
+  // }
+
+  clearForm();
+};
 </script>
 
 <style scoped>
 .contact-info-container span {
   @apply flex items-center gap-2;
+}
+
+.ea-input {
+  @apply block w-full rounded-md px-2 border-0 py-1.5;
+  @apply text-gray-900 shadow-sm sm:text-sm sm:leading-6;
+  @apply ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600;
+}
+.contact-label {
+  @apply block text-lg mb-2 font-semibold leading-6 font-primary;
+  @apply text-gray-900;
 }
 </style>

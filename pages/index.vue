@@ -2,13 +2,17 @@
   <div>
     <HomePageWelcomeHero />
 
-    <!-- Skills Section -->
     <HomePageSkills />
 
+    <HomePageExpertise />
+
+    <HomePageProjects />
+
+    <ContactMe />
     <!-- Section 3 -->
-    <section class="min-h-screen bg-[#f9f9f9] text-[#1d1d1d] flex justify-center items-center">
+    <!-- <section class="min-h-screen bg-[#f9f9f9] text-[#1d1d1d] flex justify-center items-center">
       <div class="container my-auto mx-auto grid grid-cols-1 lg:grid-cols-2">
-        <!-- 1# -->
+        
         <div class="flex flex-col gap-10 p-20 bg-white border-r-2 border-primary">
           <h3 class="whitespace-pre-line">Projects iv'e done</h3>
 
@@ -19,7 +23,7 @@
           >
         </div>
 
-        <!-- 2# -->
+       
         <div class="flex flex-col gap-10 p-20 bg-white">
           <h3 class="whitespace-pre-line">I build & design stuff</h3>
 
@@ -28,17 +32,10 @@
           <button class="button-48"><span>See my Work</span></button>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section>
-      <div>Experience</div>
-    </section>
-
-    <section>
-      <div>My Work</div>
-    </section>
-
-    <section class="container flex justify-center py-32">
+    <!-- Resume Download -->
+    <!-- <section class="container flex justify-center py-32">
       <button class="download-button">
         <div class="docs">
           <svg
@@ -78,7 +75,7 @@
           </svg>
         </div>
       </button>
-    </section>
+    </section> -->
   </div>
 </template>
 

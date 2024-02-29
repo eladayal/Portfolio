@@ -1,6 +1,6 @@
 <template>
   <section class="container mx-auto my-auto p-10 lg:p-20 text-center">
-    <h2 class="py-5">/Skills.</h2>
+    <h2 class="text-5xl py-5">/Skills.</h2>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
       <div>
         <p class="skill-title">Frontend:</p>

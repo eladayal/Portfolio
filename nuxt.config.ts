@@ -1,10 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts", "@nuxtjs/supabase", "nuxt-swiper"],
+
   devtools: { enabled: true },
-  routeRules: {
-    "/": { prerender: true },
-  },
+  // routeRules: {
+  //   "/": { prerender: true },
+  // },
 
   nitro: {
     preset: "netlify",
