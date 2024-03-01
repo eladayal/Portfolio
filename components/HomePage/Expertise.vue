@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="px-10 lg:px-20 bg-cv-primary h-[80vh] flex flex-col justify-center text-white pt-20 pb-20 overflow-hidden"
-  >
+  <div class="p-10 lg:px-20 bg-cv-primary lg:h-[80vh] flex flex-col justify-center text-white overflow-hidden">
     <h2 class="py-5 text-5xl text-white text-center">/Experience.</h2>
-    <div class="container mx-auto max-lg:px-10 grid grid-cols-1 lg:grid-cols-3 max-lg:gap-10">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 max-lg:gap-5">
       <!-- Box  -->
       <div v-for="(experience, idx) in expertises" class="flex flex-col lg:gap-5 expertise-box" :key="idx">
         <div class="flex gap-5">

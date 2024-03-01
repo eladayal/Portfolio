@@ -1,7 +1,7 @@
 <template>
   <section class="min-h-screen bg-primary flex justify-center items-center">
     <div
-      class="container z-10 mx-auto px-10 lg:px-20 grid grid-cols-1 md:grid-cols-3 justify-center items-center py-12 max-lg:gap-20 max-lg:mt-28"
+      class="container z-10 mx-auto p-10 lg:px-20 flex flex-col gap-5 lg:grid md:grid-cols-3 justify-center items-center max-lg:mt-28"
     >
       <!-- #1 -->
       <div class="col-span-2 flex flex-col justify-center w-full lg:w-full gap-10">

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="container my-5 md:my-0 w-full flex flex-col md:flex-row gap-5 md:gap-5 justify-between items-center">
-      <div class="flex flex-col md:py-14 items-center">
+    <div class="container p-10 w-full flex flex-col md:flex-row gap-2 lg:gap-5 justify-between items-center">
+      <div class="flex flex-col items-center">
         <img
           src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1698231194/Portfolio/logo-blue_vpgtzv.png"
           alt="image"
           width="200"
           height="auto"
         />
-        <div class="my-5 text-2xl font-medium font-primary">
+        <div class="my-2 text-2xl font-medium font-primary">
           Coding done <span class="emphasis font-semibold">your way</span>
         </div>
       </div>
