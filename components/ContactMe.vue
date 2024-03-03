@@ -7,7 +7,7 @@
         src="/images/svg/mobileshape.png"
       />
       <div class="my-12 relative z-10">
-        <h2 class="text-center text-5xl mb-5">/Contact me.</h2>
+        <h2 class="text-center text-5xl mb-5 text-white">/Contact me.</h2>
       </div>
       <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32">
         <img

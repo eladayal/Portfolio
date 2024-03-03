@@ -7,11 +7,14 @@
           Built and deployed 20+ projects ranging from e-commerce sites for global brands to well-known local brands,
           specializing in scalable web and hybrid mobile applications using Vue and PWA technologies.
         </p>
-        <button
-          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+
+        <a href="/projects"
+          ><button
+            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+          >
+            View more projects
+          </button></a
         >
-          View more projects
-        </button>
       </div>
       <div class="flex justify-center items-center w-full">
         <img class="w-full" src="/images/projects.png" alt="" />

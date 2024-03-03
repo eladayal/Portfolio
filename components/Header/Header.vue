@@ -25,12 +25,18 @@
       <div class="block md:hidden">
         <svg
           @click="isMenuOpen = true"
-          class="w-8 h-8"
+          class="w-8 h-8 fill-black"
           viewBox="0 0 24 24"
-          fill="none"
+          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M4 18h16M4 12h16M4 6h16" stroke="#000" stroke-width="2" stroke-linecap="round" />
+          <path
+            fill="currentColor"
+            d="M4 18h16M4 12h16M4 6h16"
+            :stroke="scrollPosition > 130 ? '#000' : '#fff'"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
         </svg>
         <!-- Screen -->
 
@@ -41,12 +47,7 @@
           @keypress="isMenuOpen = false"
         ></div>
         <!-- Menu -->
-        <Transition
-          enter-active-class="transform transition ease-in-out duration-300 "
-          enter-to-class="opacity-0 translate-x-0"
-          leave-active-class="transform transition ease-in-out duration-300 "
-          leave-to-class="opacity-100 translate-x-60"
-        >
+        <Transition name="slide-fade">
           <div
             v-show="isMenuOpen"
             class="py-10 flex lg:hidden flex-col gap-7 items-center fixed right-0 z-20 top-0 h-screen w-60 bg-[#fafafa]"
@@ -151,5 +152,19 @@ if (process.client) {
 .descale {
   @apply transform scale-110; /* Increase the image size by 25% */
   @apply transition-all duration-300; /* Add transition effect */
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 </style>

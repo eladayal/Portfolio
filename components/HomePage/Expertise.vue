@@ -1,11 +1,11 @@
 <template>
   <div class="p-10 lg:px-20 bg-cv-primary lg:h-[80vh] flex flex-col justify-center text-white overflow-hidden">
     <h2 class="py-5 text-5xl text-white text-center">/Experience.</h2>
-    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 max-lg:gap-5">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 max-lg:gap-5 lg:[&>*:nth-child(2)]:!border-x-0">
       <!-- Box  -->
       <div v-for="(experience, idx) in expertises" class="flex flex-col lg:gap-5 expertise-box" :key="idx">
         <div class="flex gap-5">
-          <div class="w-12">
+          <div class="w-16">
             <img class="w-full" :src="experience.imagePath" alt="" />
           </div>
           <div>

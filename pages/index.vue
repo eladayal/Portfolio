@@ -6,6 +6,8 @@
 
     <HomePageExpertise />
 
+    <HomePageProfessionalExperience />
+
     <HomePageProjects />
 
     <ContactMe />
@@ -103,6 +105,9 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+.contact-me-title {
+  @apply text-white;
+}
 .text-shadow {
   text-shadow: -1px 2px 2px #1d1d1d;
 }
