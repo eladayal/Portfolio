@@ -2,7 +2,6 @@
   <div class="">
     <div class="flex flex-col h-full">
       <form
-        method="POST"
         netlify
         name="contact-form"
         class="h-full max-md:container !px-5 flex flex-col justify-center gap-5 md:gap-10"
