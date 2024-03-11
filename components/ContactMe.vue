@@ -39,69 +39,7 @@
           </div>
           <!-- </div> -->
         </div>
-        <!-- <ContactForm class="z-10" /> -->
-        <div class="z-10">
-          <div class="flex flex-col h-full">
-            <form
-              action="#"
-              @submit.prevent="submitForm"
-              class="h-full max-md:container !px-5 flex flex-col justify-center gap-5 md:gap-10"
-            >
-              <!-- space-y-8  -->
-              <div>
-                <label for="name" class="contact-label">Name</label>
-                <input
-                  v-model="form.name"
-                  type="text"
-                  id="name"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="John Doe"
-                />
-                <!-- <Transition>
-              <span v-if="error" class="input-error">
-                {{ error.join(", ") }}
-              </span>
-            </Transition> -->
-              </div>
-              <div>
-                <label for="email" class="contact-label">Email</label>
-                <input
-                  v-model="form.email"
-                  type="text"
-                  id="email"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="name@company.com"
-                />
-              </div>
-              <div>
-                <label for="subject" class="contact-label">Subject</label>
-                <input
-                  v-model="form.subject"
-                  type="text"
-                  id="subject"
-                  class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="Let me know how i can help you"
-                />
-              </div>
-              <div class="sm:col-span-2">
-                <label for="message" class="contact-label">Your message</label>
-                <textarea
-                  v-model="form.message"
-                  id="message"
-                  rows="6"
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="Leave a comment..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
-              >
-                Send message
-              </button>
-            </form>
-          </div>
-        </div>
+        <FormContactForm class="z-10" />
       </div>
     </div>
   </div>

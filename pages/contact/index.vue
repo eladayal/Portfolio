@@ -40,7 +40,7 @@
           </div>
           <!-- </div> -->
         </div>
-        <ContactForm class="z-10" />
+        <FormContactForm class="z-10" />
       </div>
     </div>
   </div>

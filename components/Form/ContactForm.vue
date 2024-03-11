@@ -71,7 +71,7 @@
 
 <script setup lang="ts">
 // import nodemailer from "nodemailer";
-import { ContactForm } from "../types/index";
+import { ContactForm } from "../../types/index";
 import { ContactZodSchema } from "~/zod/contact/contact.schema";
 
 // const supabase = useSupabaseClient();
