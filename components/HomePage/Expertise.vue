@@ -56,7 +56,7 @@ const expertises = [
 
 <style lang="scss" scoped>
 .expertise-box {
-  @apply border-2 border-white p-6;
+  @apply border-2 border-white p-4;
 }
 
 .custom-underline {

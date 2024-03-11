@@ -2,8 +2,9 @@
   <div class="">
     <div class="flex flex-col h-full">
       <form
-        action="#"
-        @submit.prevent="submitForm"
+        method="POST"
+        netlify
+        name="contact-form"
         class="h-full max-md:container !px-5 flex flex-col justify-center gap-5 md:gap-10"
       >
         <!-- space-y-8  -->
@@ -68,8 +69,8 @@
 import { ContactForm } from "../types/index";
 import { ContactZodSchema } from "~/zod/contact/contact.schema";
 
-const supabase = useSupabaseClient();
-const config = useRuntimeConfig();
+// const supabase = useSupabaseClient();
+// const config = useRuntimeConfig();
 
 const form = ref<ContactForm>({
   name: "",
