@@ -2,8 +2,10 @@
   <div class="">
     <div class="flex flex-col h-full">
       <form
-        netlify
+        data-netlify="true"
+        method="POST"
         name="contact-form"
+        onsubmit="submit"
         class="h-full max-md:container !px-5 flex flex-col justify-center gap-5 md:gap-10"
       >
         <!-- space-y-8  -->
