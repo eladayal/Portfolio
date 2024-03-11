@@ -12,6 +12,7 @@
           <input
             v-model="form.name"
             type="text"
+            name="name"
             id="name"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="John Doe"
@@ -27,6 +28,7 @@
           <input
             v-model="form.email"
             type="text"
+            name="email"
             id="email"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="name@company.com"
@@ -37,6 +39,7 @@
           <input
             v-model="form.subject"
             type="text"
+            name="subject"
             id="subject"
             class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
             placeholder="Let me know how i can help you"
@@ -47,6 +50,7 @@
           <textarea
             v-model="form.message"
             id="message"
+            name="message"
             rows="6"
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
             placeholder="Leave a comment..."
