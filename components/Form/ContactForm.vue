@@ -11,7 +11,6 @@
         <div>
           <label for="name" class="contact-label">Name</label>
           <input
-            v-model="form.name"
             type="text"
             name="name"
             id="name"
@@ -27,7 +26,6 @@
         <div>
           <label for="email" class="contact-label">Email</label>
           <input
-            v-model="form.email"
             type="text"
             name="email"
             id="email"
@@ -38,7 +36,6 @@
         <div>
           <label for="subject" class="contact-label">Subject</label>
           <input
-            v-model="form.subject"
             type="text"
             name="subject"
             id="subject"
@@ -49,7 +46,6 @@
         <div class="sm:col-span-2">
           <label for="message" class="contact-label">Your message</label>
           <textarea
-            v-model="form.message"
             id="message"
             name="message"
             rows="6"
