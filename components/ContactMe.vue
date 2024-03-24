@@ -17,10 +17,10 @@
 
         <div class="relative h-full max-md:py-12 container mx-auto flex gap-1 md:gap-10 justify-center items-center">
           <!-- <div class="container mx-auto flex gap-20 md:gap-5 justify-center items-center"> -->
-          <div class="relative md:h-full flex-1 flex justify-center items-center">
-            <img class="md:hidden absolute w-full z-10" src="/images/svg/photo-background.png" alt="waves-image" />
+          <div class="md:h-full flex-1 flex justify-center items-center">
+            <img class="block md:hidden w-full z-10" src="/images/elad-contact-mobile.png" alt="" />
             <img
-              class="w-3/4 xl:w-full md:min-w-[300px] md:w-full max-md:rounded-b-[37%] md:self-end max-w-[25vw] z-20 grayscale"
+              class="hidden md:block w-3/4 xl:w-full md:min-w-[300px] md:w-full md:self-end max-w-[25vw] z-20 md:grayscale"
               src="/images/elad-min.png"
             />
           </div>

@@ -37,12 +37,12 @@
           width="400"
           height="400"
         />
-        <img
+        <!-- <img
           class="absolute w-36 md:w-56 lg:w-1/3 top-[20%] left-[80%] -translate-x-1/2 -translate-y-1/2 z-0"
           src="/images/svg/waves.svg"
           width="250"
           height="250"
-        />
+        /> -->
       </div>
     </div>
   </section>

@@ -59,7 +59,7 @@
     <section>
       <h2 class="text-3xl mb-2">Skills</h2>
       <div class="flex flex-wrap gap-3">
-        <div v-for="(skill, idx) in skills" :key="idx">
+        <div v-for="(skill, idx) in skills" :key="idx" class="">
           <p class="underline font-semibold">{{ skill.full_name }}</p>
         </div>
       </div>
@@ -107,7 +107,7 @@
     </section>
 
     <!-- LANGUAGES -->
-    <section>
+    <section class="delayDropParent">
       <h2 class="text-3xl mb-5 md:mb-2">Languages</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 max-md:gap-10">
         <div class="flex gap-2 md:justify-center items-center">
@@ -117,7 +117,7 @@
           </div>
 
           <div class="flex gap-2" v-for="index in 5" :key="index">
-            <span class="bg-cv-secondary w-5 h-5 rounded-full"></span>
+            <span class="bg-cv-secondary w-5 h-5 rounded-full delayDropChild"></span>
           </div>
         </div>
         <div class="flex gap-2 md:justify-center items-center">
@@ -126,12 +126,16 @@
             <p class="font-bold text-lg">Native</p>
           </div>
 
-          <div class="flex gap-2" v-for="index in 5" :key="index">
+          <div class="flex gap-2 delayDropChild" v-for="index in 5" :key="index">
             <span class="bg-cv-secondary w-5 h-5 rounded-full"></span>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="py-20">
+      <CVDownload />
+    </div>
   </div>
 </template>
 

@@ -9,7 +9,7 @@
       <!-- Site Logo -->
       <a href="/">
         <img
-          class="w-40 md:w-56"
+          class="site-logo w-40 md:w-56"
           :class="scrollPosition > 130 ? '' : ''"
           :src="
             scrollPosition > 130 || !isCurrentRouteHome

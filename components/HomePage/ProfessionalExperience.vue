@@ -11,9 +11,11 @@
             :class="openAcc === idx ? '!bg-sky-500' : ''"
           >
             <div class="text-base md:text-xl flex justify-between items-center">
-              <h4 class="flex gap-2 items-baseline max-md:max-w-[11rem]">{{ exp.position }} @ {{ exp.name }}</h4>
+              <p class="font-primary font-bold flex gap-2 items-baseline max-md:max-w-[11rem]">
+                {{ exp.position }} @ {{ exp.name }}
+              </p>
               <div class="flex justify-center items-baseline gap-3 md:gap-5">
-                <h4>{{ exp.period }}</h4>
+                <p class="font-primary font-bold">{{ exp.period }}</p>
                 <!-- Accordion + & - -->
                 <p
                   :class="openAcc === idx ? 'hidden' : ''"

@@ -17,7 +17,7 @@
         >
       </div>
       <div class="flex justify-center items-center w-full">
-        <img class="w-full" src="/images/projects.png" alt="" />
+        <img class="lg:px-28 w-3/4 lg:w-full" src="/images/projects.png" alt="" />
       </div>
     </div>
   </div>

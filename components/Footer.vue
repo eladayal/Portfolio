@@ -3,8 +3,9 @@
     <div class="container p-10 w-full flex flex-col md:flex-row gap-2 lg:gap-5 justify-between items-center">
       <div class="flex flex-col items-center">
         <img
+          class="site-logo"
           src="https://res.cloudinary.com/dbt4olgrj/image/upload/v1698231194/Portfolio/logo-blue_vpgtzv.png"
-          alt="image"
+          alt="site logo"
           width="200"
           height="auto"
         />
@@ -21,7 +22,7 @@
         <div v-for="nav in socialNav" :key="nav.icon">
           <NuxtLink target="_blank" :href="nav.url" ta>
             <img
-              class="w-7 h-7 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
+              class="social-icon w-7 h-7 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
               :src="nav.icon"
               alt="image"
               width="40"
