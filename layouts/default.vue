@@ -5,18 +5,18 @@
     <main class="flex-1 h-full">
       <slot />
     </main>
+    <HostagesTicker />
     <Footer />
     <!--  -->
   </div>
 </template>
 <script setup lang="ts">
 import { gsap } from "gsap";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Gsap animation
 
-onBeforeMount(() => {
+onNuxtReady(() => {
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.utils.toArray("p:not(.homepage-project-title)").forEach((p: any) => {
@@ -26,12 +26,24 @@ onBeforeMount(() => {
       y: 30,
       scrollTrigger: {
         trigger: p,
-        start: "top 80%", // start animation when the top of the element is 90% from the top of the viewport
-        end: "bottom 60%",
-        toggleActions: "play none none reverse",
+        // start animation when the top of the element is 90% from the top of the viewport
+        ...getScrollValues(),
+        toggleActions: "play none none none",
       },
     });
   });
+
+  function getScrollValues() {
+    // Define different start and end values for different viewport sizes (e.g., mobile)
+    if (window.innerWidth <= 768) {
+      // Adjust the breakpoint as needed
+      // Mobile
+      return { start: "top 90%", end: "bottom 60%" };
+    } else {
+      // Desktop
+      return { start: "top 90%", end: "bottom 60%" };
+    }
+  }
 
   ["h1", "h2", "h3", "h4", "h5"].forEach((tag) => {
     gsap.utils.toArray(tag).forEach((heading: any) => {
@@ -49,7 +61,7 @@ onBeforeMount(() => {
     });
   });
 
-  gsap.utils.toArray("img:not(.site-logo, .social-icon), svg").forEach((img: any) => {
+  gsap.utils.toArray("img:not(.site-logo, .social-icon, .dont-animate), svg:not(.dont-animate)").forEach((img: any) => {
     gsap.from(img, {
       duration: 1.2,
       opacity: 0,
@@ -58,7 +70,7 @@ onBeforeMount(() => {
         trigger: img,
         start: "top 80%",
         end: "bottom 40%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
   });

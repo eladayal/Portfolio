@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto my-auto p-10 lg:p-20 text-center">
+  <section id="skills" class="container mx-auto my-auto p-10 lg:p-20 text-center">
     <h2 class="text-5xl py-5">/Skills.</h2>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-x-16">
       <div class="skill-container">
@@ -54,26 +54,41 @@
 </template>
 
 <script setup lang="ts">
-const supabase = useSupabaseClient();
+import useTech from "~/composable/useTech";
+
+const technologies = await useTech();
 
 const icons = ref<any>([]);
 const loading = ref<boolean>(false);
 
-onMounted(async () => {
+onBeforeMount(async () => {
+  loading.value = true;
   try {
-    loading.value = true;
-    const { data: technologies, error: techError } = await supabase.from("technologies").select("*");
-
-    if (!techError) {
-      icons.value = technologies;
-      loading.value = false;
+    if (technologies) {
+      icons.value = technologies.value.data;
     }
+
+    loading.value = false;
   } catch (error) {
-    console.log(error);
   } finally {
     loading.value = false;
   }
 });
+// onMounted(async () => {
+//   try {
+//     loading.value = true;
+//     const { data: technologies, error: techError } = await supabase.from("technologies").select("*");
+
+//     if (!techError) {
+//       icons.value = technologies;
+//       loading.value = false;
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   } finally {
+//     loading.value = false;
+//   }
+// });
 </script>
 
 <style scoped>

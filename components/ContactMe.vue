@@ -1,5 +1,5 @@
 <template>
-  <div class="z-10">
+  <div id="contact" class="z-10">
     <div class="relative flex flex-col justify-center items-center max-md:py-10 md:pt-10 bg-primary">
       <!-- Mobile Shape -->
       <img

@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen bg-primary flex justify-center items-center">
+  <section id="home" class="min-h-screen bg-primary flex justify-center items-center">
     <div
       class="container z-10 mx-auto p-10 lg:px-20 flex flex-col-reverse gap-5 lg:grid md:grid-cols-3 justify-center items-center max-lg:mt-28"
     >

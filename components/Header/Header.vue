@@ -25,7 +25,7 @@
       <div class="block md:hidden">
         <svg
           @click="isMenuOpen = true"
-          class="w-8 h-8 fill-black"
+          class="dont-animate w-8 h-8 fill-black transition-all duration-300 ease-in-out"
           viewBox="0 0 24 24"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -111,6 +111,20 @@
         </nav>
       </div>
     </div>
+    <!-- Sub Menu -->
+    <div :x-show="isCurrentRouteHome" class="hidden lg:block relative w-full">
+      <div
+        class="ayal pointer-events-none opacity-0 w-full h-0 transition-all duration-200 ease-in-out"
+        :class="scrollPosition > 230 && isCurrentRouteHome ? 'opacity-100 h-12 pointer-events-auto' : ''"
+      >
+        <nav class="container flex flex-row justify-center items-center gap-7">
+          <div class="flex flex-col" v-for="(hashLink, idx) in hashMenu" :key="idx">
+            <p class="self-end text-xs">0{{ idx + 1 }}</p>
+            <a class="font-mono" :href="hashLink.hash">// {{ hashLink.name }}</a>
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -119,7 +133,12 @@ const router = useRouter();
 
 const isMenuOpen = ref(false);
 const scrollPosition = ref(0);
-const isCurrentRouteHome = computed(() => router.currentRoute.value.fullPath === "/");
+const isCurrentRouteHome = computed(
+  () =>
+    router.currentRoute.value.hash || // has hash
+    router.currentRoute.value.fullPath === "/" ||
+    router.currentRoute.value.fullPath === "/#home"
+);
 const menu = [
   {
     name: "Projects",
@@ -133,6 +152,33 @@ const menu = [
   {
     name: "Contact",
     link: "/contact",
+  },
+];
+
+const hashMenu = [
+  {
+    name: "home",
+    hash: "#home",
+  },
+  {
+    name: "skills",
+    hash: "#skills",
+  },
+  {
+    name: "experience",
+    hash: "#experience",
+  },
+  {
+    name: "professional experience",
+    hash: "#professional-experience",
+  },
+  {
+    name: "projects",
+    hash: "#projects",
+  },
+  {
+    name: "contact",
+    hash: "#contact",
   },
 ];
 
@@ -166,5 +212,15 @@ if (process.client) {
 .slide-fade-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+
+.ayal {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.544);
+  color: #fff;
+  position: absolute;
+  padding: 6px 8px;
+  width: 100vw;
+  z-index: 5;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-cv-primary text-white">
+  <section id="professional-experience" class="bg-cv-primary text-white">
     <div class="container mx-auto flex flex-col justify-center p-10 lg:p-20">
       <h2 class="py-5 text-white text-5xl text-center">/Professional Experience.</h2>
       <div class="flex flex-col gap-2 lg:px-20">

@@ -1,5 +1,8 @@
 <template>
-  <div class="p-10 lg:px-20 bg-cv-primary lg:h-[80vh] flex flex-col justify-center text-white overflow-hidden">
+  <section
+    id="experience"
+    class="p-10 lg:px-20 bg-cv-primary lg:h-[80vh] flex flex-col justify-center text-white overflow-hidden"
+  >
     <h2 class="py-5 text-5xl text-white text-center">/Experience.</h2>
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 max-lg:gap-5 lg:[&>*:nth-child(2)]:!border-x-0">
       <!-- Box  -->
@@ -23,7 +26,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

@@ -142,7 +142,10 @@
 <script setup lang="ts">
 import { ContactForm } from "../../types/index";
 import { ContactZodSchema } from "~/zod/contact/contact.schema";
-const supabase = useSupabaseClient();
+import useTech from "~/composable/useTech";
+
+const technologies = await useTech();
+
 const skills = ref<any>([]);
 const loading = ref<boolean>(false);
 const contactInfo = [
@@ -232,20 +235,14 @@ const educationAndMilitary = [
   },
 ];
 
-onMounted(async () => {
+onBeforeMount(async () => {
   try {
     loading.value = true;
-    const { data: technologies, error: techError } = await supabase
-      .from("technologies")
-      .select("*")
-      .order("id", { ascending: true });
-
-    if (!techError) {
-      skills.value = technologies;
-      loading.value = false;
+    if (technologies) {
+      skills.value = technologies.value.data;
     }
+    loading.value = false;
   } catch (error) {
-    console.log(error);
   } finally {
     loading.value = false;
   }
@@ -253,7 +250,6 @@ onMounted(async () => {
 // import nodemailer from "nodemailer";
 
 // const supabase = useSupabaseClient();
-const config = useRuntimeConfig();
 
 const form = ref<ContactForm>({
   name: "",
