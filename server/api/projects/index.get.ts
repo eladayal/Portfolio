@@ -13,7 +13,7 @@ export type Technology = {
 
 export default defineEventHandler(async (event) => {
   try {
-    let { data, error } = await supabase.from("technologies").select("*");
+    let { data, error } = await supabase.from("sites").select("*");
 
     if (error) {
       console.error("Error fetching technologies:", error.message);
