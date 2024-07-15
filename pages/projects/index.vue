@@ -118,32 +118,11 @@ onBeforeMount(async () => {
 
     loading.value = false;
   } catch (error) {
+    console.error("Error loading data:", error);
   } finally {
     loading.value = false;
   }
 });
-// onNuxtReady(async () => {
-//   try {
-//     loading.value = true;
-//     const { data: technologies, error: techError } = await supabase.from("technologies").select("*");
-//     const { data: sites, error } = await supabase.from("sites").select("*");
-
-//     if (!techError || !error) {
-//       icons.value = technologies;
-//       projects.value = sites;
-//       loading.value = false;
-
-//       // Initialize the 'hover' property for each project
-//       projects.value = sites?.map((project: any) => ({
-//         ...project,
-//         hover: true,
-//       }));
-//     }
-//   } catch (error) {
-//   } finally {
-//     loading.value = false;
-//   }
-// });
 </script>
 
 <style scoped></style>

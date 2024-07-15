@@ -54,6 +54,7 @@ onBeforeMount(async () => {
 
     loading.value = false;
   } catch (error) {
+    console.error("Error loading data:", error);
   } finally {
     loading.value = false;
   }

@@ -1,4 +1,6 @@
-import { serverSupabaseClient } from "#supabase/server";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(process.env.NUXT_APP_SUPABASE_URL || "", process.env.NUXT_APP_SUPABASE_KEY || "");
 
 export type Technology = {
   created_at: string;
@@ -10,9 +12,8 @@ export type Technology = {
 };
 
 export default defineEventHandler(async (event) => {
-  const client = await serverSupabaseClient(event);
   try {
-    let { data } = await client.from("technologies").select("*");
+    let { data } = await supabase.from("technologies").select("*");
     const technologies = data;
     return technologies;
   } catch (e) {
