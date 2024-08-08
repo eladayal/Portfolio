@@ -1,13 +1,25 @@
 <template>
-  <section id="skills" class="container mx-auto my-auto p-10 lg:p-20 text-center">
+  <section
+    id="skills"
+    class="container mx-auto my-auto p-10 lg:p-20 text-center"
+  >
     <h2 class="text-5xl py-5">/Skills.</h2>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-x-16">
       <div class="skill-container">
         <p class="skill-title">Frontend:</p>
         <div class="skill-box">
-          <div v-for="icon in icons" :key="icon.id" v-show="icon.type === 'frontend' || icon.type === 'css'">
+          <div
+            v-for="icon in icons"
+            :key="icon.id"
+            v-show="icon.type === 'frontend' || icon.type === 'css'"
+          >
             <div class="skill">
-              <img class="object-contain h-12" :src="icon.image" width="50" height="50" />
+              <img
+                class="object-contain h-12"
+                :src="icon.image"
+                width="50"
+                height="50"
+              />
               <p class="capitalize">{{ icon.full_name }}</p>
             </div>
           </div>
@@ -17,9 +29,18 @@
       <div class="skill-container">
         <p class="skill-title">Backend:</p>
         <div class="skill-box">
-          <div v-for="icon in icons" :key="icon.id" v-show="icon.type === 'backend'">
+          <div
+            v-for="icon in icons"
+            :key="icon.id"
+            v-show="icon.type === 'backend'"
+          >
             <div class="skill">
-              <img class="object-contain max-h-12" :src="icon.image" width="50" height="50" />
+              <img
+                class="object-contain max-h-12"
+                :src="icon.image"
+                width="50"
+                height="50"
+              />
               <p class="capitalize">{{ icon.full_name }}</p>
             </div>
           </div>
@@ -29,9 +50,18 @@
       <div class="skill-container">
         <p class="skill-title">Stores & Libraries:</p>
         <div class="skill-box">
-          <div v-for="icon in icons" :key="icon.id" v-show="icon.type === 'store' || icon.type === 'lib'">
+          <div
+            v-for="icon in icons"
+            :key="icon.id"
+            v-show="icon.type === 'store' || icon.type === 'lib'"
+          >
             <div class="skill">
-              <img class="object-contain max-h-12" :src="icon.image" width="50" height="50" />
+              <img
+                class="object-contain max-h-12"
+                :src="icon.image"
+                width="50"
+                height="50"
+              />
               <p class="capitalize">{{ icon.full_name }}</p>
             </div>
           </div>
@@ -41,9 +71,18 @@
       <div class="skill-container">
         <p class="skill-title">Design:</p>
         <div class="skill-box">
-          <div v-for="icon in icons" :key="icon.id" v-show="icon.type === 'design'">
+          <div
+            v-for="icon in icons"
+            :key="icon.id"
+            v-show="icon.type === 'design'"
+          >
             <div class="skill">
-              <img class="object-contain max-h-12" :src="icon.image" width="50" height="50" />
+              <img
+                class="object-contain max-h-12"
+                :src="icon.image"
+                width="50"
+                height="50"
+              />
               <p class="capitalize">{{ icon.full_name }}</p>
             </div>
           </div>
@@ -61,7 +100,7 @@ const technologies = await useTech();
 const icons = ref<any>([]);
 const loading = ref<boolean>(false);
 
-onBeforeMount(async () => {
+onMounted(async () => {
   loading.value = true;
   try {
     if (technologies) {

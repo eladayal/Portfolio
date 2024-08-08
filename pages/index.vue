@@ -45,7 +45,7 @@ const technologies = await useTech();
 const icons = ref<any>([]);
 const loading = ref<boolean>(false);
 
-onBeforeMount(async () => {
+onMounted(async () => {
   loading.value = true;
   try {
     if (technologies) {

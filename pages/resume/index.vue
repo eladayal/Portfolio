@@ -1,5 +1,7 @@
 <template>
-  <div class="container flex flex-col gap-8 px-20 py-40 !font-inter !text-cv-primary">
+  <div
+    class="container flex flex-col gap-8 px-20 py-40 !font-inter !text-cv-primary"
+  >
     <!-- Header -->
 
     <div class="flex justify-between items-center gap-4">
@@ -22,7 +24,9 @@
     <div class="contact-info-container grid grid-cols-2">
       <!-- Phone -->
       <span>
-        <a href="https://wa.me/+972506492486" class="flex items-center gap-4">+972 50-6492486 </a>
+        <a href="https://wa.me/+972506492486" class="flex items-center gap-4"
+          >+972 50-6492486
+        </a>
       </span>
 
       <!-- Email -->
@@ -45,13 +49,17 @@
     <section>
       <h2 class="text-3xl mb-2">Summery</h2>
       <p>
-        Full Stack Developer with a proven track record of delivering websites and applications that meet and exceed
-        customer demands and expectations. understanding of web development front-end, back-end and server-side
-        technologies. expertise in HTML5, CSS, JavaScript, and modern frameworks such as Vue, React and Angular, With
-        strong problem-solving skills and a detail-oriented approach. committed to delivering high-quality code and
-        ensuring optimal user experience. Excellent communication and teamwork abilities, I thrive in collaborative
-        environments, responsible, ability to manage and motivate others, efficiently working within tight deadlines and
-        multi-tasking, tech and gaming enthusiast, and adapting quickly to new environments.
+        Full Stack Developer with a proven track record of delivering websites
+        and applications that meet and exceed customer demands and expectations.
+        understanding of web development front-end, back-end and server-side
+        technologies. expertise in HTML5, CSS, JavaScript, and modern frameworks
+        such as Vue, React and Angular, With strong problem-solving skills and a
+        detail-oriented approach. committed to delivering high-quality code and
+        ensuring optimal user experience. Excellent communication and teamwork
+        abilities, I thrive in collaborative environments, responsible, ability
+        to manage and motivate others, efficiently working within tight
+        deadlines and multi-tasking, tech and gaming enthusiast, and adapting
+        quickly to new environments.
       </p>
     </section>
 
@@ -69,17 +77,25 @@
     <section>
       <h2 class="text-3xl mb-2">Experience</h2>
       <div class="flex flex-col gap-8">
-        <div class="grid grid-cols-1 md:grid-cols-6" v-for="(experience, idx) in experiences" :key="idx">
+        <div
+          class="grid grid-cols-1 md:grid-cols-6"
+          v-for="(experience, idx) in experiences"
+          :key="idx"
+        >
           <div class="col-span-1 flex flex-col">
             <p>{{ experience.period }}</p>
             <p>{{ experience.pos }}</p>
           </div>
           <div class="col-span-5">
             <p class="font-medium text-xl">{{ experience.position }}</p>
-            <p class="font-semibold text-lg text-cv-secondary">{{ experience.workplace }}</p>
+            <p class="font-semibold text-lg text-cv-secondary">
+              {{ experience.workplace }}
+            </p>
             <p class="font-semibold">{{ experience.technologies }}</p>
             <div class="flex flex-col gap-2">
-              <p v-for="(desc, idx) in experience.description" :key="idx">{{ desc }}</p>
+              <p v-for="(desc, idx) in experience.description" :key="idx">
+                {{ desc }}
+              </p>
             </div>
           </div>
         </div>
@@ -90,16 +106,24 @@
     <section>
       <h2 class="text-3xl mb-2">Education & Military Service</h2>
       <div class="flex flex-col gap-8">
-        <div class="grid grid-cols-1 md:grid-cols-6" v-for="(eduAndMil, idx) in educationAndMilitary" :key="idx">
+        <div
+          class="grid grid-cols-1 md:grid-cols-6"
+          v-for="(eduAndMil, idx) in educationAndMilitary"
+          :key="idx"
+        >
           <div class="col-span-1 flex flex-col">
             <p>{{ eduAndMil.period }}</p>
           </div>
           <div class="col-span-5">
             <p class="font-medium text-xl">{{ eduAndMil.position }}</p>
-            <p class="font-semibold text-lg text-cv-secondary">{{ eduAndMil.where }}</p>
+            <p class="font-semibold text-lg text-cv-secondary">
+              {{ eduAndMil.where }}
+            </p>
 
             <div class="flex flex-col gap-2">
-              <p v-for="(desc, idx) in eduAndMil.description" :key="idx">{{ desc }}</p>
+              <p v-for="(desc, idx) in eduAndMil.description" :key="idx">
+                {{ desc }}
+              </p>
             </div>
           </div>
         </div>
@@ -117,7 +141,9 @@
           </div>
 
           <div class="flex gap-2" v-for="index in 5" :key="index">
-            <span class="bg-cv-secondary w-5 h-5 rounded-full delayDropChild"></span>
+            <span
+              class="bg-cv-secondary w-5 h-5 rounded-full delayDropChild"
+            ></span>
           </div>
         </div>
         <div class="flex gap-2 md:justify-center items-center">
@@ -126,7 +152,11 @@
             <p class="font-bold text-lg">Native</p>
           </div>
 
-          <div class="flex gap-2 delayDropChild" v-for="index in 5" :key="index">
+          <div
+            class="flex gap-2 delayDropChild"
+            v-for="index in 5"
+            :key="index"
+          >
             <span class="bg-cv-secondary w-5 h-5 rounded-full"></span>
           </div>
         </div>
@@ -174,7 +204,8 @@ const experiences = [
     position: "Full Stack Developer",
     pos: "Full time",
     workplace: "Media Maven",
-    technologies: "Vue.js, Nuxt.js, Wordpress, TypeScript, MySQL, Postgras, MongoDB with Prisma",
+    technologies:
+      "Vue.js, Nuxt.js, Wordpress, TypeScript, MySQL, Postgras, MongoDB with Prisma",
     description: [
       "Developing tailor-made websites from inception to completion, collaborating seamlessly with designer teams to meet and exceed customer expectations. (rustic-bakery.co.il, ned-dc.com, cyan-eilat.com, place-il.org).",
     ],
@@ -235,7 +266,7 @@ const educationAndMilitary = [
   },
 ];
 
-onBeforeMount(async () => {
+onMounted(async () => {
   try {
     loading.value = true;
     if (technologies) {
