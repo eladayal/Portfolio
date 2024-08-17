@@ -48,7 +48,7 @@ const loading = ref<boolean>(false);
 onMounted(async () => {
   loading.value = true;
   try {
-    if (technologies) {
+    if (technologies && technologies.value && technologies.value.data) {
       icons.value = technologies.value.data;
     }
 
