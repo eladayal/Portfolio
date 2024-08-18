@@ -2,10 +2,16 @@ import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(process.env.NUXT_APP_SUPABASE_URL || "", process.env.NUXT_APP_SUPABASE_KEY || "");
 
-export type Technology = {
+export type Site = {
   created_at: string;
   id: number;
   name: string;
+  description: string;
+  site_name: string;
+  site_image: string;
+  url: string;
+  tags: string[];
+  hover?: boolean;
   full_name: string;
   image: string;
   type: string;
@@ -16,10 +22,10 @@ export default defineEventHandler(async (event) => {
     let { data, error } = await supabase.from("sites").select("*");
 
     if (error) {
-      console.error("Error fetching technologies:", error.message);
+      console.error("Error fetching sites:", error.message);
       return {
         status: 500,
-        body: { message: "Error fetching technologies data" },
+        body: { message: "Error fetching sites data" },
       };
     }
 

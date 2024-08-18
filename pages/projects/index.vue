@@ -50,39 +50,6 @@
             </div>
           </a>
         </div>
-
-        <!-- <div
-          class="w-full rounded group max-h-fit overflow-hidden shadow-md flex flex-col hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 ease-in-out"
-        >
-          <a href="/contact" class="!cursor-pointer">
-            <div
-              class="flex items-center justify-center w-full h-40 bg-slate-200 transition-all duration-300 ease-in-out"
-            >
-              <NuxtImg
-                class="dont-animate min-w-[150px] w-16 opacity-100 group-hover:opacity-0 transition-opacity duration-300 ease-in-out"
-                src="/images/svg/yourlogogoeshere.png"
-                alt=""
-                preload
-              />
-            </div>
-
-            <div class="px-6 py-4">
-              <p class="font-bold text-xl mb-1">Your site</p>
-              <p class="text-gray-700 text-base h-24 overflow-y-auto">
-                Your next project could be featured here! <br />
-                click here to get in touch.
-              </p>
-              <p class="text-lg font-bold text-sky-700 hover:underline">Mysite.com</p>
-            </div>
-            <div
-              class="text-left space-y-2 md:opacity-0 md:translate-y-full transition-all duration-300 md:group-hover:translate-y-0 md:group-hover:opacity-100"
-            >
-              <div class="flex gap-2 px-2 py-2">
-                <div class="w-5 h-auto flex justify-center items-center"></div>
-              </div>
-            </div>
-          </a>
-        </div> -->
       </div>
     </div>
   </div>
@@ -95,8 +62,12 @@ import useProject from "~/composable/useProject";
 const technologies = await useTech();
 const sites = await useProject();
 
-const icons = ref<any>([]);
-const projects = ref<any>([]);
+// const icons = ref<any>([]);
+// const projects = ref<any>([]);
+
+// Reactive references for icons, projects, and loading state
+const icons = ref<any[]>(technologies.value?.data || []);
+const projects = ref<any[]>(sites.value?.data || []);
 
 const loading = ref<boolean>(false);
 const hover = ref<boolean>(true);
@@ -105,21 +76,21 @@ const setHover = (index: number, value: boolean) => {
   projects.value[index].hover = value;
 };
 
-onMounted(async () => {
-  loading.value = true;
-  try {
-    if (technologies && technologies.value && technologies.value.data && sites && sites.value && sites.value.data) {
-      icons.value = technologies.value.data;
-      projects.value = sites.value.data;
-    }
+// onMounted(async () => {
+//   loading.value = true;
+//   try {
+//     if (technologies && technologies.value && technologies.value.data && sites && sites.value && sites.value.data) {
+//       icons.value = technologies.value.data;
+//       projects.value = sites.value.data;
+//     }
 
-    loading.value = false;
-  } catch (error) {
-    console.error("Error loading data:", error);
-  } finally {
-    loading.value = false;
-  }
-});
+//     loading.value = false;
+//   } catch (error) {
+//     console.error("Error loading data:", error);
+//   } finally {
+//     loading.value = false;
+//   }
+// });
 </script>
 
 <style scoped></style>
