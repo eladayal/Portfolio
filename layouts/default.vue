@@ -1,32 +1,51 @@
 <template>
   <div class="min-h-screen flex flex-col">
+    <Transition name="overlay-fade">
+      <div v-if="!pageReady" class="fixed inset-0 z-[100] bg-white flex justify-center items-center">
+        <Loader />
+      </div>
+    </Transition>
     <Header />
-    <!-- max-lg:mt-28 -->
     <main class="flex-1 h-full">
       <slot />
     </main>
-    <HostagesTicker />
+
     <Footer />
-    <!--  -->
   </div>
 </template>
 <script setup lang="ts">
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Gsap animation
+const pageReady = ref(false);
 
 onNuxtReady(() => {
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.utils.toArray("p:not(.homepage-project-title)").forEach((p: any) => {
-    gsap.from(p, {
+  // Pre-set initial animation states while the overlay is still visible.
+  // This prevents the flash where SSR content appears at its final position
+  // before GSAP runs and snaps it back to the start state.
+  gsap.set("p:not(.homepage-project-title):not(.delayDropChild)", { opacity: 0, y: 30 });
+  gsap.set(
+    "h1:not(.delayDropChild), h2:not(.delayDropChild), h3:not(.delayDropChild), h4:not(.delayDropChild), h5:not(.delayDropChild)",
+    { opacity: 0, y: -30 },
+  );
+  gsap.set(
+    "img:not(.site-logo):not(.social-icon):not(.dont-animate):not(.delayDropChild), svg:not(.dont-animate):not(.delayDropChild)",
+    { opacity: 0, y: 45 },
+  );
+
+  // Reveal the page — elements are now at their initial animation positions
+  pageReady.value = true;
+
+  // Use gsap.to() since initial states are already set via gsap.set() above
+  gsap.utils.toArray("p:not(.homepage-project-title):not(.delayDropChild)").forEach((p: any) => {
+    gsap.to(p, {
       duration: 1,
-      opacity: 0,
-      y: 30,
+      opacity: 1,
+      y: 0,
       scrollTrigger: {
         trigger: p,
-        // start animation when the top of the element is 90% from the top of the viewport
         ...getScrollValues(),
         toggleActions: "play none none none",
       },
@@ -34,23 +53,19 @@ onNuxtReady(() => {
   });
 
   function getScrollValues() {
-    // Define different start and end values for different viewport sizes (e.g., mobile)
     if (window.innerWidth <= 768) {
-      // Adjust the breakpoint as needed
-      // Mobile
       return { start: "top 90%", end: "bottom 60%" };
     } else {
-      // Desktop
       return { start: "top 90%", end: "bottom 60%" };
     }
   }
 
   ["h1", "h2", "h3", "h4", "h5"].forEach((tag) => {
-    gsap.utils.toArray(tag).forEach((heading: any) => {
-      gsap.from(heading, {
+    gsap.utils.toArray(`${tag}:not(.delayDropChild)`).forEach((heading: any) => {
+      gsap.to(heading, {
         duration: 1,
-        opacity: 0,
-        y: -30,
+        opacity: 1,
+        y: 0,
         scrollTrigger: {
           trigger: heading,
           start: "top 80%",
@@ -61,19 +76,23 @@ onNuxtReady(() => {
     });
   });
 
-  gsap.utils.toArray("img:not(.site-logo, .social-icon, .dont-animate), svg:not(.dont-animate)").forEach((img: any) => {
-    gsap.from(img, {
-      duration: 1.2,
-      opacity: 0,
-      y: 45,
-      scrollTrigger: {
-        trigger: img,
-        start: "top 80%",
-        end: "bottom 40%",
-        toggleActions: "play none none none",
-      },
+  gsap.utils
+    .toArray(
+      "img:not(.site-logo):not(.social-icon):not(.dont-animate):not(.delayDropChild), svg:not(.dont-animate):not(.delayDropChild)",
+    )
+    .forEach((img: any) => {
+      gsap.to(img, {
+        duration: 1.2,
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: img,
+          start: "top 80%",
+          end: "bottom 40%",
+          toggleActions: "play none none none",
+        },
+      });
     });
-  });
 
   const delayParent = document.querySelectorAll(".delayDropParent");
 
@@ -95,4 +114,11 @@ onNuxtReady(() => {
   });
 });
 </script>
-<style scoped></style>
+<style scoped>
+.overlay-fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+.overlay-fade-leave-to {
+  opacity: 0;
+}
+</style>

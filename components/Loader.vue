@@ -1,5 +1,5 @@
 <template>
-  <div class="loader"><span>{</span><span>}</span></div>
+  <div class="loader"><span>{</span><span>E</span><span>A</span><span>}</span></div>
 </template>
 
 <script setup lang="ts"></script>
@@ -21,9 +21,10 @@
     display: inline-block;
     animation: pulse 0.4s alternate infinite ease-in-out;
 
-    &:nth-child(odd) {
-      animation-delay: 0.4s;
-    }
+    &:nth-child(1) { animation-delay: 0s; }
+    &:nth-child(2) { animation-delay: 0.1s; }
+    &:nth-child(3) { animation-delay: 0.2s; }
+    &:nth-child(4) { animation-delay: 0.3s; }
   }
 }
 

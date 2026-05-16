@@ -7,7 +7,7 @@
       class="container mx-auto px-10 md:px-20 flex justify-between items-center gap-5 py-5 transition-all duration-300 transition-height"
     >
       <!-- Site Logo -->
-      <a href="/">
+      <NuxtLink to="/" class="shrink-0">
         <img
           class="site-logo w-40 md:w-56"
           :class="scrollPosition > 130 ? '' : ''"
@@ -20,7 +20,7 @@
           width="200"
           height="40"
         />
-      </a>
+      </NuxtLink>
       <!-- Mobile Menu -->
       <div class="block md:hidden">
         <svg
@@ -83,14 +83,15 @@
               </svg>
             </button>
             <nav class="flex flex-col justify-center items-center gap-5">
-              <a
+              <NuxtLink
                 v-for="item in menu"
                 :key="item.name"
-                :href="item.link"
+                :to="item.link"
                 class="text-lg font-medium text-primary font-primary hover:!text-black transition-all duration-300"
+                @click="isMenuOpen = false"
               >
                 {{ item.name }}
-              </a>
+              </NuxtLink>
             </nav>
           </div>
         </Transition>
@@ -99,15 +100,15 @@
       <!-- Desktop Menu -->
       <div class="hidden md:block">
         <nav class="flex gap-5">
-          <a
+          <NuxtLink
             v-for="item in menu"
             :key="item.name"
-            :href="item.link"
+            :to="item.link"
             class="text-lg font-medium text-white font-primary hover:!text-black transition-all duration-300"
             :class="scrollPosition > 130 || !isCurrentRouteHome ? '!text-primary' : ''"
           >
             {{ item.name }}
-          </a>
+          </NuxtLink>
         </nav>
       </div>
     </div>

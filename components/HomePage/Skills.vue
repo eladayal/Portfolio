@@ -55,41 +55,10 @@
 
 <script setup lang="ts">
 import useTech from "~/composable/useTech";
+import type { Technology } from "~/types";
 
 const technologies = await useTech();
-
-const icons = ref<any>([]);
-const loading = ref<boolean>(false);
-
-onMounted(async () => {
-  loading.value = true;
-  try {
-    if (technologies && technologies.value && technologies.value.data) {
-      icons.value = technologies.value.data;
-    }
-
-    loading.value = false;
-  } catch (error) {
-    console.error("Error fetching technologies:", error);
-  } finally {
-    loading.value = false;
-  }
-});
-// onMounted(async () => {
-//   try {
-//     loading.value = true;
-//     const { data: technologies, error: techError } = await supabase.from("technologies").select("*");
-
-//     if (!techError) {
-//       icons.value = technologies;
-//       loading.value = false;
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   } finally {
-//     loading.value = false;
-//   }
-// });
+const icons = ref<Technology[]>(technologies.value?.data ?? []);
 </script>
 
 <style scoped>

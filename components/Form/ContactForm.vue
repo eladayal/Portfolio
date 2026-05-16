@@ -2,50 +2,49 @@
   <div class="">
     <div class="flex flex-col h-full">
       <form
-        data-netlify="true"
-        method="POST"
-        name="contact-form"
         class="h-full max-md:container !px-5 flex flex-col justify-center gap-5 md:gap-10"
+        @submit.prevent="submitForm"
       >
-        <!-- space-y-8  -->
         <div>
           <label for="name" class="contact-label">Name</label>
           <input
+            v-model="form.name"
             type="text"
             name="name"
             id="name"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="John Doe"
           />
-          <!-- <Transition>
-            <span v-if="error" class="input-error">
-              {{ error.join(", ") }}
-            </span>
-          </Transition> -->
+          <span v-if="errors.name" class="input-error">{{ errors.name.join(", ") }}</span>
         </div>
         <div>
           <label for="email" class="contact-label">Email</label>
           <input
+            v-model="form.email"
             type="text"
             name="email"
             id="email"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="name@company.com"
           />
+          <span v-if="errors.email" class="input-error">{{ errors.email.join(", ") }}</span>
         </div>
         <div>
           <label for="subject" class="contact-label">Subject</label>
           <input
+            v-model="form.subject"
             type="text"
             name="subject"
             id="subject"
             class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-            placeholder="Let me know how i can help you"
+            placeholder="Let me know how I can help you"
           />
+          <span v-if="errors.subject" class="input-error">{{ errors.subject.join(", ") }}</span>
         </div>
         <div class="sm:col-span-2">
           <label for="message" class="contact-label">Your message</label>
           <textarea
+            v-model="form.message"
             id="message"
             name="message"
             rows="6"
@@ -53,11 +52,16 @@
             placeholder="Leave a comment..."
           ></textarea>
         </div>
+
+        <p v-if="successMsg" class="text-green-600 font-semibold">{{ successMsg }}</p>
+        <p v-if="errorMsg" class="text-red-600 font-semibold">{{ errorMsg }}</p>
+
         <button
           type="submit"
-          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+          :disabled="sending"
+          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 disabled:opacity-50"
         >
-          Send message
+          {{ sending ? "Sending…" : "Send message" }}
         </button>
       </form>
     </div>
@@ -65,67 +69,42 @@
 </template>
 
 <script setup lang="ts">
-// import nodemailer from "nodemailer";
-import { ContactForm } from "../../types/index";
+import type { ContactForm } from "../../types/index";
 import { ContactZodSchema } from "~/zod/contact/contact.schema";
 
-// const supabase = useSupabaseClient();
-// const config = useRuntimeConfig();
+const form = ref<ContactForm>({ name: "", subject: "", email: "", message: "" });
+const errors = ref<Record<string, string[]>>({});
+const sending = ref(false);
+const successMsg = ref("");
+const errorMsg = ref("");
 
-const form = ref<ContactForm>({
-  name: "",
-  subject: "",
-  email: "",
-  message: "",
-});
-
-const errors = ref<any>({});
-
-const clearForm = () => {
-  form.value = {
-    name: "",
-    subject: "",
-    email: "",
-    message: "",
-  };
-};
 const submitForm = async () => {
-  // const transporter = nodemailer.createTransport({
-  //   host: "smtp.gmail.com",
-  //   port: 465,
-  //   secure: true,
-  //   auth: config.smtp,
-  // });
-  const parsedForm = ContactZodSchema.safeParse(form.value);
-  if (!parsedForm.success) {
-    errors.value = parsedForm.error.formErrors?.fieldErrors;
-  } else {
-    errors.value = {};
+  errors.value = {};
+  successMsg.value = "";
+  errorMsg.value = "";
+
+  const parsed = ContactZodSchema.safeParse(form.value);
+  if (!parsed.success) {
+    errors.value = parsed.error.formErrors.fieldErrors as Record<string, string[]>;
+    return;
   }
-  // console.log("aweweqwe", parsedForm);
-  console.log(errors.value);
-  // const res = await $fetch("/api/contact", {
-  //   method: "POST",
-  //   body: parsedForm.data,
-  // });
 
-  // if (res) {
-  //   // swal.fire({
-  //   //   icon: 'success',
-  //   //   title: 'הטופס נשלח בהצלחה',
-  //   //   text: 'תודה, נדאג לחזור אליך בהקדם',
-  //   // });
-  // }
-
-  clearForm();
+  sending.value = true;
+  try {
+    await $fetch("/api/contact", { method: "POST", body: parsed.data });
+    successMsg.value = "Message sent! I'll get back to you soon.";
+    form.value = { name: "", subject: "", email: "", message: "" };
+  } catch {
+    errorMsg.value = "Something went wrong. Please try again or email me directly.";
+  } finally {
+    sending.value = false;
+  }
 };
 </script>
 
 <style scoped>
-.ea-input {
-  @apply block w-full rounded-md px-2 border-0 py-1.5;
-  @apply text-gray-900 shadow-sm sm:text-sm sm:leading-6;
-  @apply ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600;
+.input-error {
+  @apply text-red-500 text-sm mt-1 block;
 }
 .contact-label {
   @apply block text-lg mb-2 font-semibold leading-6 font-primary;

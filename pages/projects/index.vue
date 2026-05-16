@@ -7,20 +7,17 @@
         <div
           class="rounded group max-h-fit overflow-hidden shadow-md flex flex-col hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 ease-in-out"
           v-for="(project, idx) in projects"
-          :key="idx"
-          @mouseover="setHover(idx, false)"
-          @mouseleave="setHover(idx, true)">
+          :key="idx">
           <a :href="project.url" class="!cursor-pointer">
-            <div
-              class="flex items-center justify-center w-full h-40 bg-slate-200 transition-all duration-300 ease-in-out">
+            <div class="relative flex items-center justify-center w-full h-40 bg-slate-200 overflow-hidden">
               <NuxtImg
-                class="dont-animate nuxt-img transition-opacity duration-300 ease-in-out"
-                :class="
-                  project.hover
-                    ? 'min-w-[150px] w-16 opacity-100 group-hover:opacity-0'
-                    : 'opacity-0 w-full h-full object-cover group-hover:opacity-100'
-                "
-                :src="project.hover ? project.image : project.site_image"
+                class="dont-animate transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0 w-16 min-w-[150px]"
+                :src="project.image"
+                :alt="project.name"
+                preload />
+              <NuxtImg
+                class="dont-animate transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 absolute inset-0 w-full h-full object-cover"
+                :src="project.site_image"
                 :alt="project.name"
                 preload />
             </div>
@@ -58,39 +55,22 @@
 <script setup lang="ts">
 import useTech from "~/composable/useTech";
 import useProject from "~/composable/useProject";
+import type { Technology, Site } from "~/types";
+
+useSeoMeta({
+  title: "Projects | Elad Ayal",
+  description: "A showcase of projects built by Elad Ayal — Full Stack Developer.",
+  ogTitle: "Projects | Elad Ayal",
+  ogDescription: "A showcase of projects built by Elad Ayal — Full Stack Developer.",
+});
 
 const technologies = await useTech();
 const sites = await useProject();
 
-// const icons = ref<any>([]);
-// const projects = ref<any>([]);
-
-// Reactive references for icons, projects, and loading state
-const icons = ref<any[]>(technologies.value?.data || []);
-const projects = ref<any[]>(sites.value?.data || []);
+const icons = ref<Technology[]>(technologies.value?.data || []);
+const projects = ref<Site[]>(sites.value?.data || []);
 
 const loading = ref<boolean>(false);
-const hover = ref<boolean>(true);
-
-const setHover = (index: number, value: boolean) => {
-  projects.value[index].hover = value;
-};
-
-// onMounted(async () => {
-//   loading.value = true;
-//   try {
-//     if (technologies && technologies.value && technologies.value.data && sites && sites.value && sites.value.data) {
-//       icons.value = technologies.value.data;
-//       projects.value = sites.value.data;
-//     }
-
-//     loading.value = false;
-//   } catch (error) {
-//     console.error("Error loading data:", error);
-//   } finally {
-//     loading.value = false;
-//   }
-// });
 </script>
 
 <style scoped></style>

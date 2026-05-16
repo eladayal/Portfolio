@@ -1,4 +1,4 @@
-import { Technology } from "~/server/api/technologies/index.get";
+import type { Technology } from "~/types";
 
 export default async () => {
   const technologies = useState("technologies", () => ({

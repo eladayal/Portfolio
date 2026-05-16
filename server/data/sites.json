@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "created_at": "2023-10-22 18:30:43.391346+00",
+    "name": "NED - Data Centers",
+    "site_name": "ned-dc.com",
+    "description": "an Israeli-based data center owner-operator. We focus on funding, designing, building and operating data centers",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697369517/Portfolio/ned_vyygbm.png",
+    "url": "https://ned-dc.com/",
+    "tags": ["html", "php", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1703959201/Portfolio/ned-sute_typysf_e0dv3n.jpg"
+  },
+  {
+    "id": 2,
+    "created_at": "2023-10-23 10:09:43.199167+00",
+    "name": "Rustic Bakery",
+    "site_name": "rustic-bakery.co.il",
+    "description": "Tailor made site for one of the largest importers of: Nature valley, Pillsbury, Haggen daaz and Fiber one, keeping the site responsive and up to date with latest technologies.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697376517/Portfolio/Rustic-logo_shq4gz.png",
+    "url": "https://rustic-bakery.co.il/",
+    "tags": ["html", "php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1703959213/Portfolio/rustic-site_tcbywe_ftkupw.jpg"
+  },
+  {
+    "id": 3,
+    "created_at": "2024-06-03 17:05:27.438854+00",
+    "name": "Selectika",
+    "site_name": "selectika.com",
+    "description": "Collaborated seamlessly with designers, developers, and Selectika to create an exceptional website, ensuring a user-friendly, visually stunning, and highly functional digital experience that exceeded client expectations.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1717434414/Portfolio/site-logo_e4xjql.svg",
+    "url": "https://selectika.com/",
+    "tags": ["html", "php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1717434425/Portfolio/Screenshot_2024-06-03_at_20.04.11_us6gwo.png"
+  },
+  {
+    "id": 4,
+    "created_at": "2024-05-21 15:16:57.462662+00",
+    "name": "Gabso Group",
+    "site_name": "gabso.co.il",
+    "description": "Collaborated seamlessly with designers, developers, and Gabso Group to create an exceptional real estate website, ensuring a user-friendly, visually stunning, and highly functional digital experience that exceeded client expectations.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1716303651/Portfolio/cropped-_D7_9C_D7_95_D7_92_D7_95-_D7_9C_D7_95_D7_92_D7_95-PNG-2-1-e1711968936798_nznvrk.png",
+    "url": "https://gabso.co.il/",
+    "tags": ["html", "php", "javascript", "wp", "tailwind", "gsap", "alpine", "il", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1717434720/Portfolio/Screenshot_2024-06-03_at_20.10.50_q7osuo.jpg"
+  },
+  {
+    "id": 5,
+    "created_at": "2023-10-23 10:06:34.865071+00",
+    "name": "Aroma - Home Barista",
+    "site_name": "aromahomebarista.co.il",
+    "description": "A landing page for one of the largest coffeehouse and coffee distributors in Israel for a new service they provide. in addition of making real time adjustments to the site design and components to suit customer requests.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697375337/Portfolio/aroma-logo_lc2blc.svg",
+    "url": "https://www.aromahomebarista.co.il/",
+    "tags": ["html", "javascript", "sass", "wp", "tailwind", "gsap", "alpine", "ps", "ai"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1703959201/Portfolio/aroma-site_jfnmtz_czykyv.jpg"
+  },
+  {
+    "id": 6,
+    "created_at": "2024-08-20 08:00:42.97978+00",
+    "name": "Biga",
+    "site_name": "biga-bakery.co.il",
+    "description": "I developed the official website for Biga Bakery, creating a responsive, visually appealing site that effectively showcases their artisan breads and pastries.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1724141863/Portfolio/bigaloogoo_hfd0cu.png",
+    "url": "https://biga-bakery.co.il/",
+    "tags": ["html", "php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1724141913/Portfolio/Screenshot_2024-08-20_at_11.18.26_yiftju.png"
+  },
+  {
+    "id": 7,
+    "created_at": "2023-10-23 10:10:26.268349+00",
+    "name": "Cyan",
+    "site_name": "cyan-eilat.com",
+    "description": "Real estate site for a customer, dynamic components and content management system.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697375069/Portfolio/cyan-logo-inverted_kwepe8.svg",
+    "url": "https://cyan-eilat.com/",
+    "tags": ["php", "wp", "tailwind", "gsap", "alpine", "ps", "figma"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1703959201/Portfolio/cyan-site_lxvu3t_tpknmh.jpg"
+  },
+  {
+    "id": 8,
+    "created_at": "2024-01-24 12:56:19.482293+00",
+    "name": "Pappaya",
+    "site_name": "pappaya.co.il",
+    "description": "Welcome to Pappaya, where craftsmanship meets comfort, and style seamlessly blends with functionality. Explore our exquisite collection of handcrafted furniture, meticulously designed to elevate your living spaces. From timeless classics to contemporary pieces, each item is a testament to our commitment to quality and aesthetic finesse. Transform your home with our thoughtfully curated selection, where every piece tells a unique story of elegance and enduring design. Experience the art of furniture at Pappaya.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1706100938/Portfolio/image-14_osxdsa.png",
+    "url": "https://pappaya.co.il/",
+    "tags": ["php", "wp", "alpine", "gsap", "tailwind", "figma"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1706100946/Portfolio/Screenshot_2024-01-24_at_14.48.00_uo147j.png"
+  },
+  {
+    "id": 9,
+    "created_at": "2024-02-11 15:09:21.111308+00",
+    "name": "BARNEA",
+    "site_name": "barlaw.co.il",
+    "description": "Barnea Jaffa Lande is a leading commercial law firm in Israel. Our international capabilities, including commercial knowledge, innovative thinking, and broad network of connections with law firms abroad, enable us to provide comprehensive legal solutions.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1707664136/Portfolio/logo_tm0qbv.png",
+    "url": "https://barlaw.co.il/internship/",
+    "tags": ["html", "javascript", "css", "tailwind", "gsap", "alpine", "figma", "ai"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1707664562/Portfolio/Screenshot_2024-02-11_at_17.15.53_rvfede.png"
+  },
+  {
+    "id": 10,
+    "created_at": "2024-02-11 15:24:48.079535+00",
+    "name": "Meitav Dash",
+    "site_name": "mimun.meitav.co.il",
+    "description": "Meitav Dash, the real estate arm of Meitav Investment House, is a non-bank credit company that has set its banner on providing comprehensive financial services to individuals, entrepreneurs and purchasing groups, based on transparency, professionalism, security and experience.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1707664761/Portfolio/logo_meitav_neklwv.png",
+    "url": "https://mimun.meitav.co.il/",
+    "tags": ["nuxt", "typescript", "pinia", "git", "sass", "tailwind", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1707664706/Portfolio/Screenshot_2024-02-11_at_17.18.23_onldpq.png"
+  },
+  {
+    "id": 11,
+    "created_at": "2024-02-29 16:40:56.12542+00",
+    "name": "Rugs & Co",
+    "site_name": "rugsandco.com",
+    "description": "Rugs & Co. is a leading brand in Israel for custom-designed rugs, modern, and fresh lifestyle. Founded by Ezra Hakshouri, a pioneer in the rug industry in Israel and worldwide, the company offers a unique collection of innovative rugs that push the boundaries of imagination.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1709224581/Portfolio/rugslogo_zrpuzw.svg",
+    "url": "https://rugsandco.com/",
+    "tags": ["html", "php", "javascript", "wp", "css", "tailwind", "alpine"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1709224578/Portfolio/Screenshot_2024-02-29_at_18.35.27_rtruxu.png"
+  },
+  {
+    "id": 15,
+    "created_at": "2024-08-27 12:46:51.766675+00",
+    "name": "Unimarket",
+    "site_name": "unimarket.co.il",
+    "description": "In collaboration with Unimarket Factory and Logistic Center, we swiftly developed a modern and efficient website that highlights their comprehensive logistics and manufacturing services. Despite the tight timeline, the website accurately reflects their operational excellence and industry expertise. The result is a user-friendly, visually appealing platform that effectively communicates their value proposition to potential clients.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1724763475/Portfolio/uni-logo_mfd8fd.png",
+    "url": "https://unimarket.co.il/",
+    "tags": ["html", "php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1730282492/Portfolio/Screenshot_2024-10-30_at_12.00.26_foo2of.png"
+  },
+  {
+    "id": 16,
+    "created_at": "2024-08-27 13:03:32.867956+00",
+    "name": "Nick Academy",
+    "site_name": "nick-academy.co.il",
+    "description": "In partnership with Nick Academy, we developed a vibrant and engaging website designed to reflect their dynamic educational offerings. By closely aligning with their vision and leveraging efficient design processes, we delivered a site that not only meets their needs but also stands out with its user-friendly interface and visually appealing design.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1724764176/Portfolio/Logo_1_kbrdmu.png",
+    "url": "https://nick-academy.maven-dev.co.il/",
+    "tags": ["php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1724764204/Portfolio/Screenshot_2024-08-27_at_16.09.57_yqksdt.png"
+  },
+  {
+    "id": 17,
+    "created_at": "2024-11-24 15:15:52.555174+00",
+    "name": "Shin Shin Israel",
+    "site_name": "shinshinjafisrael.co.il",
+    "description": "Partnered with ShinShinim JAFI to create a dynamic, bilingual website that highlights their youth programs and global initiatives. The site features an intuitive design, ensuring seamless navigation and accessibility for diverse audiences.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1732461606/Portfolio/service-logo_dgrchq.svg",
+    "url": "https://shinshinjafisrael.co.il/",
+    "tags": ["php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1732461611/Portfolio/Screenshot_2024-11-24_at_17.17.41_mf91ib.png"
+  },
+  {
+    "id": 18,
+    "created_at": "2024-11-24 15:22:26.261997+00",
+    "name": "Mechinot Mahar",
+    "site_name": "mechinot.co.il",
+    "description": "Collaborated with Mechinot to develop a modern, user-friendly website showcasing their pre-military programs. The platform emphasizes clear organization, bilingual content, and easy access to information for prospective participants and their families.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1732461717/Portfolio/mahar-llogo_yxb6e5.png",
+    "url": "https://mechinot.co.il/",
+    "tags": ["php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1732461721/Portfolio/Screenshot_2024-11-24_at_17.21.47_rgzbbk.png"
+  },
+  {
+    "id": 19,
+    "created_at": "2024-11-24 15:28:40.044309+00",
+    "name": "Kineret",
+    "site_name": "kineret.co.il",
+    "description": "Worked with Kineret College to design a sleek, responsive website that effectively highlights their academic programs and campus life. The site features a user-friendly interface and bilingual content to cater to a wide audience.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1732462167/Portfolio/footer-logo.304f91_jswksr.png",
+    "url": "https://kineret-henna.co.il/",
+    "tags": ["php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1732462169/Portfolio/Screenshot_2024-11-24_at_17.28.01_pj2fsh.png"
+  },
+  {
+    "id": 20,
+    "created_at": "2023-10-23 10:05:12.318426+00",
+    "name": "Place-IL",
+    "site_name": "place-il.org",
+    "description": "Enabling Israeli tech companies to effectively hire new talent from under-represented groups at scale with minimal risk.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697379862/Portfolio/logo-yangoAsset_2_uydlux.svg",
+    "url": "https://place-il.org/",
+    "tags": ["javascript", "wp", "tailwind", "gsap", "alpine", "ps", "ai"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1703959213/Portfolio/place-il-site_gcbnez_glwych.jpg"
+  },
+  {
+    "id": 21,
+    "created_at": "2023-10-23 10:03:02.906182+00",
+    "name": "Mundo Market",
+    "site_name": "mundomarket.co.il",
+    "description": "Tailor made site for a customer that specializes in importing of sweets and goods from all over the world",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697373571/Portfolio/logo_hz8azz.png",
+    "url": "https://test.mundomarket.co.il/",
+    "tags": ["nuxt", "typescript", "git", "pinia", "tailwind", "prisma", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1703959201/Portfolio/mundo-site_gjiw7w_d6jyvw.jpg"
+  },
+  {
+    "id": 22,
+    "created_at": "2023-10-23 10:04:27.088964+00",
+    "name": "Jello",
+    "site_name": "jello.io",
+    "description": "Trello base clone, Our goal was to create a Trello clone, a task management app designed to manage projects and increase productivity.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1697374679/Portfolio/Screenshot_2023-10-15_at_15.51.13_gj4xbf.png",
+    "url": "https://jello-server-0byo.onrender.com/",
+    "tags": ["react", "node", "html", "css", "sass", "javascript", "tailwind", "mongo"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1703959200/Portfolio/jello-site_rjwh5n_o4bg7p.jpg"
+  },
+  {
+    "id": 23,
+    "created_at": "2024-12-18 08:11:43.248996+00",
+    "name": "CRG - AI LABS",
+    "site_name": "crg.co.il",
+    "description": "We partnered with AI Labs to create a sleek, modern website that highlights their cutting-edge artificial intelligence solutions. Collaborating closely with their team, we ensured the site aligned perfectly with their vision and brand. The project was completed on a tight schedule, delivering a high-quality result in record time.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1734509569/Portfolio/logo-header-1_l4qt3o.png",
+    "url": "https://crg-ai.co.il/",
+    "tags": ["php", "javascript", "wp", "tailwind", "gsap", "alpine", "ps", "xd"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1734509588/Portfolio/Screenshot_2024-12-18_at_10.12.58_pjuckd.png"
+  },
+  {
+    "id": 24,
+    "created_at": "2025-03-13 11:49:36.082778+00",
+    "name": "Noviks",
+    "site_name": "noviks.co.il",
+    "description": "Designed and developed Noviks, a premium e-commerce website, ensuring a seamless shopping experience with a sleek, user-friendly interface. Leveraged Shopify's capabilities to create a high-performance, visually engaging, and fully responsive platform that enhances user engagement and drives conversions.",
+    "image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1741877018/Portfolio/Noviks-Logo_erdj5y.png",
+    "url": "https://noviks.co.il/",
+    "tags": ["shopify"],
+    "site_image": "https://res.cloudinary.com/dbt4olgrj/image/upload/v1741867418/Portfolio/Screenshot_2025-03-13_at_14.03.30_da8qp0.png"
+  }
+]

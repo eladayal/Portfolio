@@ -147,33 +147,18 @@
 </template>
 
 <script setup lang="ts">
-import { ContactForm } from "../../types/index";
-import { ContactZodSchema } from "~/zod/contact/contact.schema";
 import useTech from "~/composable/useTech";
+import type { Technology } from "~/types";
+
+useSeoMeta({
+  title: "Resume | Elad Ayal",
+  description: "Resume of Elad Ayal — Full Stack Developer with experience in Vue, Nuxt, TypeScript, Node.js, and more.",
+  ogTitle: "Resume | Elad Ayal",
+  ogDescription: "Resume of Elad Ayal — Full Stack Developer with experience in Vue, Nuxt, TypeScript, Node.js, and more.",
+});
 
 const technologies = await useTech();
-
-const skills = ref<any>([]);
-const loading = ref<boolean>(false);
-const contactInfo = [
-  {
-    icon: "phone",
-    text: "+972 506492486",
-    isLink: true,
-  },
-  {
-    icon: "email",
-    text: "ayalelad@gmail.com",
-  },
-  {
-    icon: "address",
-    text: "Tel Aviv, Israel",
-  },
-  {
-    icon: "linkedin",
-    text: "linkedin.com/in/eladayal",
-  },
-];
+const skills = ref<Technology[]>(technologies.value?.data ?? []);
 
 const experiences = [
   {
@@ -242,70 +227,6 @@ const educationAndMilitary = [
   },
 ];
 
-onMounted(async () => {
-  try {
-    loading.value = true;
-    if (technologies && technologies.value && technologies.value.data) {
-      skills.value = technologies.value.data;
-    }
-    loading.value = false;
-  } catch (error) {
-    console.error("Error fetching technologies:", error);
-  } finally {
-    loading.value = false;
-  }
-});
-// import nodemailer from "nodemailer";
-
-// const supabase = useSupabaseClient();
-
-const form = ref<ContactForm>({
-  name: "",
-  subject: "",
-  email: "",
-  message: "",
-});
-
-const errors = ref<any>({});
-
-const clearForm = () => {
-  form.value = {
-    name: "",
-    subject: "",
-    email: "",
-    message: "",
-  };
-};
-const submitForm = async () => {
-  // const transporter = nodemailer.createTransport({
-  //   host: "smtp.gmail.com",
-  //   port: 465,
-  //   secure: true,
-  //   auth: config.smtp,
-  // });
-  const parsedForm = ContactZodSchema.safeParse(form.value);
-  if (!parsedForm.success) {
-    errors.value = parsedForm.error.formErrors?.fieldErrors;
-  } else {
-    errors.value = {};
-  }
-  // console.log("aweweqwe", parsedForm);
-  console.log(errors.value);
-  // const res = await $fetch("/api/contact", {
-  //   method: "POST",
-  //   body: parsedForm.data,
-  // });
-
-  // if (res) {
-  //   // swal.fire({
-  //   //   icon: 'success',
-  //   //   title: 'הטופס נשלח בהצלחה',
-  //   //   text: 'תודה, נדאג לחזור אליך בהקדם',
-  //   // });
-  // }
-
-  clearForm();
-};
 </script>
 
 <style scoped>

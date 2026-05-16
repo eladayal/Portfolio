@@ -1,8 +1,8 @@
+@use "button.scss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "button.scss";
 
 @layer base {
   @font-face {

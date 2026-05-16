@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts", "@nuxtjs/supabase", "nuxt-swiper"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts", "nuxt-swiper"],
+
+  compatibilityDate: "2026-05-16",
 
   devtools: { enabled: true },
   // routeRules: {
@@ -9,11 +11,6 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "netlify",
-  },
-  supabase: {
-    url: process.env.NUXT_APP_SUPABASE_URL,
-    key: process.env.NUXT_APP_SUPABASE_KEY,
-    redirect: false,
   },
 
   css: ["/assets/styles/main.scss"],

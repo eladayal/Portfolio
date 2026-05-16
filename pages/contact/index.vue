@@ -49,6 +49,13 @@
 <script setup lang="ts">
 import { EnvelopeIcon, DevicePhoneMobileIcon } from "@heroicons/vue/24/solid";
 
+useSeoMeta({
+  title: "Contact | Elad Ayal",
+  description: "Get in touch with Elad Ayal — Full Stack Developer. Send a message for inquiries or project discussions.",
+  ogTitle: "Contact | Elad Ayal",
+  ogDescription: "Get in touch with Elad Ayal — Full Stack Developer.",
+});
+
 const personalInfo = {
   name: "Elad Ayal",
   position: "Full Stack Developer",

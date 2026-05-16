@@ -1,12 +1,28 @@
-// ~/types/index.d.ts
+export interface ContactForm {
+  name: string;
+  subject: string;
+  email: string;
+  message: string;
+}
 
-export { ContactForm };
+export interface Site {
+  created_at: string;
+  id: number;
+  name: string;
+  description: string;
+  site_name: string;
+  site_image: string;
+  url: string;
+  tags: string[];
+  hover?: boolean;
+  image: string;
+}
 
-declare global {
-  interface ContactForm {
-    name: string;
-    subject: string;
-    email: string;
-    message: string;
-  }
+export interface Technology {
+  created_at: string;
+  id: number;
+  name: string;
+  full_name: string;
+  image: string;
+  type: string;
 }
