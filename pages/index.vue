@@ -10,6 +10,7 @@
 
     <HomePageProjects />
 
+    <!-- <HomePageContactMe />  -->
   </div>
 </template>
 
@@ -18,9 +19,11 @@ import useTech from "~/composable/useTech";
 
 useSeoMeta({
   title: "Elad Ayal | Full Stack Developer",
-  description: "Portfolio of Elad Ayal — Full Stack Developer specializing in Vue, Nuxt, TypeScript, and modern web technologies.",
+  description:
+    "Portfolio of Elad Ayal — Full Stack Developer specializing in Vue, Nuxt, TypeScript, and modern web technologies.",
   ogTitle: "Elad Ayal | Full Stack Developer",
-  ogDescription: "Portfolio of Elad Ayal — Full Stack Developer specializing in Vue, Nuxt, TypeScript, and modern web technologies.",
+  ogDescription:
+    "Portfolio of Elad Ayal — Full Stack Developer specializing in Vue, Nuxt, TypeScript, and modern web technologies.",
 });
 
 await useTech();

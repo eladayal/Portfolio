@@ -10,16 +10,14 @@
           :key="idx">
           <a :href="project.url" class="!cursor-pointer">
             <div class="relative flex items-center justify-center w-full h-40 bg-slate-200 overflow-hidden">
-              <NuxtImg
+              <img
                 class="dont-animate transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0 w-16 min-w-[150px]"
                 :src="project.image"
-                :alt="project.name"
-                preload />
-              <NuxtImg
+                :alt="project.name" />
+              <img
                 class="dont-animate transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 absolute inset-0 w-full h-full object-cover"
                 :src="project.site_image"
-                :alt="project.name"
-                preload />
+                :alt="project.name" />
             </div>
 
             <div class="px-6 py-4">
@@ -35,13 +33,12 @@
               class="text-left space-y-2 md:opacity-0 md:translate-y-full transition-all duration-300 md:group-hover:translate-y-0 md:group-hover:opacity-100">
               <div class="flex gap-2 px-2 py-2">
                 <div class="w-5 h-auto flex justify-center items-center" v-for="(tag, idx) in project.tags" :key="idx">
-                  <NuxtImg
+                  <img
                     v-if="icons.find((icon:any) => icon.name === tag)"
                     class="dont-animate object-contain"
                     :src="icons.find((icon:any) => icon.name === tag)?.image"
                     width="50"
-                    height="50"
-                    preload />
+                    height="50" />
                 </div>
               </div>
             </div>
